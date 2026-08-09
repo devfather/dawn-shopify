@@ -352,8 +352,8 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Non-Repairable within the first 30 days",
-            "icon": "question_mark",
-            "row_content": "<ul><li>Partial Refund Eligible - we will retain our diagnostic fee and shipping charges. The remaining balance will be refunded.</li></ul><p></p>",
+            "icon": "none",
+            "row_content": "<p>Partial Refund Eligible - we will retain our diagnostic fee and shipping charges. The remaining balance will be refunded.</p><p></p>",
             "page": ""
           }
         },
@@ -361,8 +361,8 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Non-Repairable AFTER the first 30 days",
-            "icon": "question_mark",
-            "row_content": "<ul><li>NO REFUNDS - Once the first 30 days has elapsed we will still cover labor to repair items under warranty, however if an item is non-repairable for any reason no refunds will be given.</li></ul><p></p>",
+            "icon": "none",
+            "row_content": "<p>NO REFUNDS - Once the first 30 days has elapsed we will still cover labor to repair items under warranty, however if an item is non-repairable for any reason no refunds will be given.</p><p></p>",
             "page": ""
           }
         },
@@ -370,8 +370,8 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Replacement Coverage",
-            "icon": "question_mark",
-            "row_content": "<ul><li>Our warranty does NOT cover replacements. If your item can't be repaired we will not cover the cost to replace your item as a whole. Our warranty is intended to cover our labor to continue to repair your item so long as it's actually able to be repaired.</li></ul><p></p>",
+            "icon": "none",
+            "row_content": "<p>Our warranty does NOT cover replacements. If your item can't be repaired we will not cover the cost to replace your item as a whole. Our warranty is intended to cover our labor to continue to repair your item so long as it's actually able to be repaired.</p><p></p>",
             "page": ""
           }
         },
@@ -379,8 +379,26 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Extensive Damage",
-            "icon": "question_mark",
-            "row_content": "<ul><li>Sometimes items come back under warranty that have damage that is extensive and goes well beyond the scope of the original repair. If this happens we will contact you and give you the option to pay additional labor to fix the item or discontinue the repair.</li></ul><p></p>",
+            "icon": "none",
+            "row_content": "<p>Sometimes items come back under warranty that have damage that is extensive and goes well beyond the scope of the original repair. If this happens we will contact you and give you the option to pay additional labor to fix the item or discontinue the repair.</p><p></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_djWPEQ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Accessory Parts",
+            "icon": "none",
+            "row_content": "<p>Warranty coverage is strictly for the control board portion of what we are repairing. If you send us additional components with your order, those items are not covered under our warranty.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_WcLbqQ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Shipping Charges",
+            "icon": "none",
+            "row_content": "<p>Shipping charges are always non-refundable.</p>",
             "page": ""
           }
         }
@@ -389,7 +407,9 @@
         "collapsible_row_yVjD48",
         "collapsible_row_mTQKGk",
         "collapsible_row_DAja8K",
-        "collapsible_row_rWMLz3"
+        "collapsible_row_rWMLz3",
+        "collapsible_row_djWPEQ",
+        "collapsible_row_WcLbqQ"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
