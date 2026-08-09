@@ -445,7 +445,7 @@
           "type": "button",
           "settings": {
             "button_label": "Learn More",
-            "button_link": "shopify://pages/appliance-replacement-parts",
+            "button_link": "shopify://pages/the-repair-process",
             "button_style_secondary": false
           }
         }
@@ -457,7 +457,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/replacement-parts.jpg",
+        "image": "shopify://shop_images/our-process-banner_85936b77-1c83-492d-a174-8855218729a7.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
@@ -478,22 +478,22 @@
         "heading_Y8AUGt": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "Our Warranty",
             "heading_size": "h1"
           }
         },
         "text_RBqBqP": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>We have the industry's best warranty hands down. There is no other company that offers a more comprehensive of a warranty than we do. </p>",
             "text_style": "body"
           }
         },
         "button_bUMJgk": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
+            "button_label": "Learn More",
+            "button_link": "shopify://pages/warranty",
             "button_style_secondary": false
           }
         }
@@ -505,6 +505,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
+        "image": "shopify://shop_images/our-process-banner.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
