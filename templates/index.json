@@ -405,10 +405,52 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
+    },
+    "collection_list_yfjEwP": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_Qz7FK3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_fmYyRQ": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_LBTe4R": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_Qz7FK3",
+        "featured_collection_fmYyRQ",
+        "featured_collection_LBTe4R"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "Services we offer",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "image_banner",
+    "collection_list_yfjEwP",
     "brand_slider_NaxdBq",
     "featured_collection"
   ]
