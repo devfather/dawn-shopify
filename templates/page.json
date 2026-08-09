@@ -266,6 +266,45 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "image_with_text_xDWyEX": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_rHtmVt": {
+          "type": "heading",
+          "settings": {
+            "heading": "Labor Costs",
+            "heading_size": "h1"
+          }
+        },
+        "text_thQLjt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Labor costs to repair damage are almost always free while under warranty. In some rare cases where extensive damage has occurred due to reasons outside of our control we may require additional labor. </p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rHtmVt",
+        "text_thQLjt"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/lock.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "image_behavior": "zoom-in",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
@@ -276,6 +315,7 @@
     "image_with_text_TXpwJi",
     "image_with_text_Rh3A3H",
     "image_with_text_jgQ6bq",
-    "image_with_text_Qzf3Vg"
+    "image_with_text_Qzf3Vg",
+    "image_with_text_xDWyEX"
   ]
 }
