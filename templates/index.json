@@ -437,14 +437,14 @@
         "text_q9zr6d": {
           "type": "text",
           "settings": {
-            "text": "<p>Our repair process is simple, fast, and built to allow you to get your devices back up in running in no time.</p>",
+            "text": "<p>Our repair process is simple, fast, and built to allow you to get your devices back up in running in no time. Click below to see how our mail in repair process works.</p>",
             "text_style": "body"
           }
         },
         "button_dtQNhM": {
           "type": "button",
           "settings": {
-            "button_label": "Shop Parts",
+            "button_label": "Learn More",
             "button_link": "shopify://pages/appliance-replacement-parts",
             "button_style_secondary": false
           }
