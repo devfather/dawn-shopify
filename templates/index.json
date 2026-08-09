@@ -27,7 +27,7 @@
         "image": "shopify://shop_images/lab1.jpg",
         "image_overlay_opacity": 10,
         "image_height": "large",
-        "image_behavior": "none",
+        "image_behavior": "ambient",
         "desktop_content_position": "bottom-center",
         "desktop_content_alignment": "center",
         "show_text_box": false,
@@ -46,8 +46,8 @@
             "image": "shopify://shop_images/appliance-control-repair.jpg",
             "title": "Appliance Controls",
             "text": "<p>We fix controls for all major home and commercial appliances like ovens, dishwashers, stove tops, refrigerators and more.</p>",
-            "link_label": "Learn More",
-            "link": ""
+            "link_label": "Get Started",
+            "link": "shopify://pages/appliance-control-repair"
           }
         },
         "column_hmCBVW": {
@@ -56,8 +56,8 @@
             "image": "shopify://shop_images/abs-repair.jpg",
             "title": "Automotive Controls",
             "text": "<p>We service a wide variety of automotive equipment such as ABS Modules and clusters for a wide range of vehicle makes and models. </p>",
-            "link_label": "",
-            "link": ""
+            "link_label": "Get Started",
+            "link": "shopify://pages/automotive-control-board-repair"
           }
         },
         "column_GLgXXy": {
@@ -66,8 +66,8 @@
             "image": "shopify://shop_images/appliance-repair.jpg",
             "title": "In Home Appliance Repair",
             "text": "<p>If you live in the Kansas City Metro area we can come to your home to service every major appliance in your home or business.</p>",
-            "link_label": "",
-            "link": ""
+            "link_label": "Schedule Appointment",
+            "link": "shopify://pages/in-home-appliance-repair"
           }
         }
       },
@@ -424,6 +424,54 @@
         "padding_bottom": 36
       }
     },
+    "image_with_text_8EjXDy": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_kTckeV": {
+          "type": "heading",
+          "settings": {
+            "heading": "Replacement Parts",
+            "heading_size": "h1"
+          }
+        },
+        "text_q9zr6d": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We have millions of parts available ranging from OEM replacement parts to board level semiconductor components. </p>",
+            "text_style": "body"
+          }
+        },
+        "button_dtQNhM": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Parts",
+            "button_link": "shopify://pages/appliance-replacement-parts",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_kTckeV",
+        "text_q9zr6d",
+        "button_dtQNhM"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/replacement-parts.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -457,6 +505,7 @@
     "image_banner",
     "multicolumn_nAxTxb",
     "brand_slider_NaxdBq",
+    "image_with_text_8EjXDy",
     "featured_collection"
   ]
 }
