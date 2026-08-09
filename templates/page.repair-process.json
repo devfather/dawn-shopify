@@ -39,14 +39,14 @@
         "heading_eD9epC": {
           "type": "heading",
           "settings": {
-            "heading": "Pack your Item",
+            "heading": "Create Repair Order",
             "heading_size": "h1"
           }
         },
         "text_yPqCFp": {
           "type": "text",
           "settings": {
-            "text": "<p>If there is a defect in our work, we will fix it for free. Mistakes can and do happen from time to time but no worries, if we made a mistake it's covered</p>",
+            "text": "<p>Creating your repair order is simple. Enter your part number into our search bar, select your repair service, and add it to your cart. Follow the checkout instructions, and your repair request can be created in just a few minutes. If you are unsure of your part number, contact us and we’ll be happy to help.</p>",
             "text_style": "body"
           }
         }
@@ -57,7 +57,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/magnifying-glass.jpg",
+        "image": "shopify://shop_images/process-cart.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
@@ -78,14 +78,14 @@
         "heading_Ewi9Di": {
           "type": "heading",
           "settings": {
-            "heading": "Component Failure",
+            "heading": "Print Instructions",
             "heading_size": "h1"
           }
         },
         "text_mk7BwC": {
           "type": "text",
           "settings": {
-            "text": "<p>If any of the components that we replace fail within the warranty period, you are covered! Some exclusion apply to special order components where vendor warranty supersedes our warranty. </p>",
+            "text": "<p>After completing your order, you will receive an email confirmation with your receipt and detailed repair instructions. These instructions will guide you through preparing your part for shipment. If you have any questions during the process, our team is here to help ensure everything goes smoothly.</p>",
             "text_style": "body"
           }
         }
@@ -96,7 +96,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/component.jpg",
+        "image": "shopify://shop_images/process-print.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "text_first",
@@ -117,14 +117,14 @@
         "heading_EdC8d3": {
           "type": "heading",
           "settings": {
-            "heading": "Lightning Strike",
+            "heading": "Pack and Ship",
             "heading_size": "h1"
           }
         },
         "text_VFrE4P": {
           "type": "text",
           "settings": {
-            "text": "<p>Lightning strike and power surges can happen. This is one of the features of our warranty that nobody else covers. But rest assured, if your part gets hit with lightning, we will repair it for free within the warranty period. </p>",
+            "text": "<p>Properly packaging your part is an important step in protecting your repair. Carefully follow the provided packing instructions to prevent shipping delays or damage. You may ship your part using any major carrier of your choice.</p>",
             "text_style": "body"
           }
         }
@@ -135,7 +135,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/shield-lightning.jpg",
+        "image": "shopify://shop_images/process-pack.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
@@ -156,14 +156,14 @@
         "heading_yLF4LA": {
           "type": "heading",
           "settings": {
-            "heading": "Accidental Damage",
+            "heading": "Arrival",
             "heading_size": "h1"
           }
         },
         "text_tFj64p": {
           "type": "text",
           "settings": {
-            "text": "<p>Sometimes damage can occur that is caused by you or your technician when it's being reinstalled, and that's ok! Our warranty covers the labor to fix it again if your part is accidentally damaged.</p>",
+            "text": "<p>Once your part arrives at our facility, we inspect and document everything included with your shipment. We verify that all required components are present and move your repair into our service queue. If anything is missing, our team will contact you before proceeding.</p>",
             "text_style": "body"
           }
         }
@@ -174,7 +174,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/gear-wrench.jpg",
+        "image": "shopify://shop_images/process-arrival.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "text_first",
@@ -195,14 +195,14 @@
         "heading_amRAVk": {
           "type": "heading",
           "settings": {
-            "heading": "Diagnostic Fees",
+            "heading": "Repair Time",
             "heading_size": "h1"
           }
         },
         "text_9b3Hqn": {
           "type": "text",
           "settings": {
-            "text": "<p>Sometimes your item might fail for a completely new reason several months later. If this happens you are covered, we do not charge additional diagnostic fees to fix any new issues that arise later down the road.</p>",
+            "text": "<p>Once your repair enters our queue, you will receive updates throughout the process. Most repairs are completed within <strong>10–15 business days</strong>, depending on the complexity of the repair and availability of required components. Expedited repair options may be available when needed.</p>",
             "text_style": "body"
           }
         }
@@ -213,7 +213,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/diagnose.jpg",
+        "image": "shopify://shop_images/process-repair-time.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
@@ -234,14 +234,14 @@
         "heading_CbJpqm": {
           "type": "heading",
           "settings": {
-            "heading": "Shipping Charges",
+            "heading": "Repaired and Returned",
             "heading_size": "h1"
           }
         },
         "text_f8FwP4": {
           "type": "text",
           "settings": {
-            "text": "<p>Within the first 30 days, if there is a workmanship related issue, we cover the both directions of shipping. Outside of the 30 days, you cover shipping to us, and we cover shipping back to you.</p>",
+            "text": "<p>After your repair is completed, we carefully package and ship your part back to you. You will receive tracking information by email so you can monitor your shipment. Repairs are typically shipped the same day they are completed.</p>",
             "text_style": "body"
           }
         }
@@ -252,7 +252,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/truck.jpg",
+        "image": "shopify://shop_images/process-repaired.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "text_first",
@@ -273,14 +273,14 @@
         "heading_rHtmVt": {
           "type": "heading",
           "settings": {
-            "heading": "Labor Costs",
+            "heading": "Install and Enjoy!",
             "heading_size": "h1"
           }
         },
         "text_thQLjt": {
           "type": "text",
           "settings": {
-            "text": "<p>Labor costs to repair damage are almost always free while under warranty. In some rare cases where extensive damage has occurred due to reasons outside of our control we may require additional labor. </p>",
+            "text": "<p>Once your repaired part arrives, reinstall it and get your equipment back up and running. Our goal is to provide a reliable repair solution that saves you time and money.</p>",
             "text_style": "body"
           }
         }
@@ -291,7 +291,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/lock.jpg",
+        "image": "shopify://shop_images/process-complete.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
@@ -305,137 +305,6 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
-    },
-    "image_with_text_WyWqyD": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_bVc7Hb": {
-          "type": "heading",
-          "settings": {
-            "heading": "Extended Warranty",
-            "heading_size": "h1"
-          }
-        },
-        "text_8DrA8z": {
-          "type": "text",
-          "settings": {
-            "text": "<p>All of our repairs come with a warranty for a specified period of time for no additional charge. At checkout you will have the option to extend that warranty for up to 4 years of total protection.</p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_bVc7Hb",
-        "text_8DrA8z"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/calendar.jpg",
-        "height": "adapt",
-        "desktop_image_width": "small",
-        "layout": "text_first",
-        "image_behavior": "zoom-in",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "collapsible_content_w7QBaE": {
-      "type": "collapsible-content",
-      "blocks": {
-        "collapsible_row_yVjD48": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Non-Repairable within the first 30 days",
-            "icon": "none",
-            "row_content": "<p>Partial Refund Eligible - we will retain our diagnostic fee and shipping charges. The remaining balance will be refunded.</p><p></p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_mTQKGk": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Non-Repairable AFTER the first 30 days",
-            "icon": "none",
-            "row_content": "<p>NO REFUNDS - Once the first 30 days has elapsed we will still cover labor to repair items under warranty, however if an item is non-repairable for any reason no refunds will be given.</p><p></p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_DAja8K": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Replacement Coverage",
-            "icon": "none",
-            "row_content": "<p>Our warranty does NOT cover replacements. If your item can't be repaired we will not cover the cost to replace your item as a whole. Our warranty is intended to cover our labor to continue to repair your item so long as it's actually able to be repaired.</p><p></p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_rWMLz3": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Extensive Damage",
-            "icon": "none",
-            "row_content": "<p>Sometimes items come back under warranty that have damage that is extensive and goes well beyond the scope of the original repair. If this happens we will contact you and give you the option to pay additional labor to fix the item or discontinue the repair.</p><p></p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_djWPEQ": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Accessory Parts",
-            "icon": "none",
-            "row_content": "<p>Warranty coverage is strictly for the control board portion of what we are repairing. If you send us additional components with your order, those items are not covered under our warranty.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_WcLbqQ": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Shipping Charges",
-            "icon": "none",
-            "row_content": "<p>Shipping charges are always non-refundable.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_LW7tNL": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Damage in transit",
-            "icon": "none",
-            "row_content": "<p>Packages that sustain damage during shipping are the liability of the customer. We offer customers the option to add insurance to their shipments back to them. If insurance isn't added prior to shipment we assume no liability for damages that occur in transit to or from our facility.</p>",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_yVjD48",
-        "collapsible_row_mTQKGk",
-        "collapsible_row_DAja8K",
-        "collapsible_row_rWMLz3",
-        "collapsible_row_djWPEQ",
-        "collapsible_row_WcLbqQ",
-        "collapsible_row_LW7tNL"
-      ],
-      "name": "t:sections.collapsible_content.presets.name",
-      "settings": {
-        "caption": "",
-        "heading": "Warranty Exclusions",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "layout": "none",
-        "container_color_scheme": "",
-        "color_scheme": "",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
@@ -447,8 +316,6 @@
     "image_with_text_Rh3A3H",
     "image_with_text_jgQ6bq",
     "image_with_text_Qzf3Vg",
-    "image_with_text_xDWyEX",
-    "image_with_text_WyWqyD",
-    "collapsible_content_w7QBaE"
+    "image_with_text_xDWyEX"
   ]
 }
