@@ -305,6 +305,45 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "image_with_text_WyWqyD": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_bVc7Hb": {
+          "type": "heading",
+          "settings": {
+            "heading": "Extended Warranty",
+            "heading_size": "h1"
+          }
+        },
+        "text_8DrA8z": {
+          "type": "text",
+          "settings": {
+            "text": "<p>All of our repairs come with a warranty for a specified period of time for no additional charge. At checkout you will have the option to extend that warranty for up to 4 years of total protection.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_bVc7Hb",
+        "text_8DrA8z"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/calendar.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "image_behavior": "zoom-in",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
@@ -316,6 +355,7 @@
     "image_with_text_Rh3A3H",
     "image_with_text_jgQ6bq",
     "image_with_text_Qzf3Vg",
-    "image_with_text_xDWyEX"
+    "image_with_text_xDWyEX",
+    "image_with_text_WyWqyD"
   ]
 }
