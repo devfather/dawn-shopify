@@ -36,6 +36,7 @@
         "button"
       ],
       "settings": {
+        "image": "shopify://shop_images/lab1.jpg",
         "image_overlay_opacity": 40,
         "image_height": "large",
         "image_behavior": "none",
@@ -46,6 +47,63 @@
         "stack_images_on_mobile": false,
         "mobile_content_alignment": "center",
         "show_text_below": false
+      }
+    },
+    "multicolumn_nAxTxb": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_WeFwxi": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/appliance-control-repair.jpg",
+            "title": "Appliance Controls",
+            "text": "<p>We fix controls for all major home and commercial appliances like ovens, dishwashers, stove tops, refrigerators and more.</p>",
+            "link_label": "Learn More",
+            "link": ""
+          }
+        },
+        "column_hmCBVW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/abs-repair.jpg",
+            "title": "Automotive Controls",
+            "text": "<p>We service a wide variety of automotive equipment such as ABS Modules and clusters for a wide range of vehicle makes and models. </p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_GLgXXy": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/appliance-repair.jpg",
+            "title": "If you live in the Kansas City Metro area we can come to your home to service every major appliance in your home or business.",
+            "text": "<p>If it has a circuit board, we can probably fix it.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_WeFwxi",
+        "column_hmCBVW",
+        "column_GLgXXy"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Services We Offer",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "brand_slider_NaxdBq": {
@@ -371,7 +429,7 @@
         "heading_alignment": "center",
         "logo_height": 52,
         "logo_spacing": 32,
-        "scroll_speed": 40,
+        "scroll_speed": 60,
         "pause_on_hover": true,
         "color_scheme": "",
         "padding_top": 36,
@@ -405,52 +463,11 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
-    },
-    "collection_list_yfjEwP": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_Qz7FK3": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "featured_collection_fmYyRQ": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "featured_collection_LBTe4R": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_Qz7FK3",
-        "featured_collection_fmYyRQ",
-        "featured_collection_LBTe4R"
-      ],
-      "name": "t:sections.collection-list.presets.name",
-      "settings": {
-        "title": "Services we offer",
-        "heading_size": "h1",
-        "image_ratio": "square",
-        "columns_desktop": 3,
-        "color_scheme": "",
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
     "image_banner",
-    "collection_list_yfjEwP",
+    "multicolumn_nAxTxb",
     "brand_slider_NaxdBq",
     "featured_collection"
   ]
