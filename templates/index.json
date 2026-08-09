@@ -76,8 +76,8 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/appliance-repair.jpg",
-            "title": "If you live in the Kansas City Metro area we can come to your home to service every major appliance in your home or business.",
-            "text": "<p>If it has a circuit board, we can probably fix it.</p>",
+            "title": "In Home Appliance Repair",
+            "text": "<p>If you live in the Kansas City Metro area we can come to your home to service every major appliance in your home or business.</p>",
             "link_label": "",
             "link": ""
           }
