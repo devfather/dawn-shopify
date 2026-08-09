@@ -58,7 +58,7 @@
       "custom_css": [],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/process-cart.jpg",
+        "image": "shopify://shop_images/process-cart-v2.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
@@ -97,7 +97,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/process-print.jpg",
+        "image": "shopify://shop_images/process-print-v2.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "text_first",
@@ -136,7 +136,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/process-pack.jpg",
+        "image": "shopify://shop_images/process-pack-v2.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
@@ -175,7 +175,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/process-arrival.jpg",
+        "image": "shopify://shop_images/process-arrival-v2.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "text_first",
@@ -214,7 +214,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/process-repair-time.jpg",
+        "image": "shopify://shop_images/process-repair-time-v2.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
@@ -253,7 +253,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/process-repaired.jpg",
+        "image": "shopify://shop_images/process-repaired-v2.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "text_first",
@@ -292,7 +292,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/process-complete.jpg",
+        "image": "shopify://shop_images/process-complete-v2.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
