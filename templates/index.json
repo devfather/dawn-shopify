@@ -485,7 +485,7 @@
         "text_RBqBqP": {
           "type": "text",
           "settings": {
-            "text": "<p>We have the industry's best warranty hands down. There is no other company that offers a more comprehensive of a warranty than we do. </p>",
+            "text": "<p>We have the industry's best warranty hands down. There is no other company that offers a more comprehensive workmanship warranty than we do. Click to learn more to see for yourself.</p>",
             "text_style": "body"
           }
         },
@@ -505,9 +505,9 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/our-process-banner.jpg",
+        "image": "shopify://shop_images/warranty.jpg",
         "height": "adapt",
-        "desktop_image_width": "medium",
+        "desktop_image_width": "small",
         "layout": "text_first",
         "image_behavior": "zoom-in",
         "content_layout": "no-overlap",
