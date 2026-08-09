@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_banner": {
@@ -29,33 +38,32 @@
       "settings": {
         "image_overlay_opacity": 40,
         "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
         "image_behavior": "none",
+        "desktop_content_position": "bottom-center",
         "desktop_content_alignment": "center",
+        "show_text_box": false,
         "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
         "show_text_below": false
       }
     },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
+        "collection": "all",
+        "products_to_show": 8,
         "title": "Featured products",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
         "columns_desktop": 4,
-        "color_scheme": "scheme-1",
+        "enable_desktop_slider": false,
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
+        "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -63,13 +71,408 @@
         "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 44,
+        "padding_bottom": 36
+      }
+    },
+    "brand_slider_NaxdBq": {
+      "type": "brand-slider",
+      "blocks": {
+        "brand_9YLCYR": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_KnNzh8": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_eHpxGR": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_TVMFMf": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_3nEYNj": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_NLE84m": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_dAK6rK": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/toshiba.svg",
+            "brand_name": "Toshiba",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_HNFQKy": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/hp.svg",
+            "brand_name": "",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_zDTnxG": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/yamaha.svg",
+            "brand_name": "",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_FDUVUa": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/acer.svg",
+            "brand_name": "",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_jwM9b3": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/dell.svg",
+            "brand_name": "",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_Qa3XXg": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/caloric.svg",
+            "brand_name": "",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_Dm7YwX": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/dacor.svg",
+            "brand_name": "",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_pnpHG4": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/asus.svg",
+            "brand_name": "",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_RAQiAE": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/sony.svg",
+            "brand_name": "",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_Wwgwhd": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/crosley.svg",
+            "brand_name": "",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_iUjBMc": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/ge.svg",
+            "brand_name": "",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_eEKkFW": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/panasonic.svg",
+            "brand_name": "",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_6P4AHr": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/iwatani.svg",
+            "brand_name": "",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_MHMYDR": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/apple.svg",
+            "brand_name": "",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_9RVxBP": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/bosch.svg",
+            "brand_name": "",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_PkM9PK": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/magic_chef.svg",
+            "brand_name": "",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_kTMpJ6": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/viking.svg",
+            "brand_name": "",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_YBBJbP": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/roper.svg",
+            "brand_name": "",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_UewxVt": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/kitchenaid.svg",
+            "brand_name": "",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_GYnbEh": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/amana.svg",
+            "brand_name": "",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_JAFfdd": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/litton.svg",
+            "brand_name": "",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_KkfN8a": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/kenmore.svg",
+            "brand_name": "",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_WptEtY": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/tappan.svg",
+            "brand_name": "",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_4bptDV": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/danby.svg",
+            "brand_name": "",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_jbWiej": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/broan.svg",
+            "brand_name": "",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_FbNLCe": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/whirlpool.svg",
+            "brand_name": "Whirlpool",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_Uehr8B": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/frigidaire.svg",
+            "brand_name": "",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_bTpFpB": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/fisher_paykel.svg",
+            "brand_name": "",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_CRWymi": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/maytag.svg",
+            "brand_name": "",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_DUbrg3": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/jennair.svg",
+            "brand_name": "",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_eVEHwY": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/lg.svg",
+            "brand_name": "",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        },
+        "brand_RwrPJV": {
+          "type": "brand",
+          "settings": {
+            "brand_name": "",
+            "link": "",
+            "open_in_new_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "brand_9YLCYR",
+        "brand_KnNzh8",
+        "brand_eHpxGR",
+        "brand_TVMFMf",
+        "brand_3nEYNj",
+        "brand_NLE84m",
+        "brand_dAK6rK",
+        "brand_HNFQKy",
+        "brand_zDTnxG",
+        "brand_FDUVUa",
+        "brand_jwM9b3",
+        "brand_Qa3XXg",
+        "brand_Dm7YwX",
+        "brand_pnpHG4",
+        "brand_RAQiAE",
+        "brand_Wwgwhd",
+        "brand_iUjBMc",
+        "brand_eEKkFW",
+        "brand_6P4AHr",
+        "brand_MHMYDR",
+        "brand_9RVxBP",
+        "brand_PkM9PK",
+        "brand_kTMpJ6",
+        "brand_YBBJbP",
+        "brand_UewxVt",
+        "brand_GYnbEh",
+        "brand_JAFfdd",
+        "brand_KkfN8a",
+        "brand_WptEtY",
+        "brand_4bptDV",
+        "brand_jbWiej",
+        "brand_FbNLCe",
+        "brand_Uehr8B",
+        "brand_bTpFpB",
+        "brand_CRWymi",
+        "brand_DUbrg3",
+        "brand_eVEHwY",
+        "brand_RwrPJV"
+      ],
+      "name": "t:sections.brand-slider.presets.name",
+      "settings": {
+        "title": "Brands we work on",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "logo_height": 48,
+        "logo_spacing": 48,
+        "scroll_speed": 30,
+        "pause_on_hover": true,
+        "color_scheme": "",
+        "padding_top": 36,
         "padding_bottom": 36
       }
     }
   },
   "order": [
     "image_banner",
-    "featured_collection"
+    "featured_collection",
+    "brand_slider_NaxdBq"
   ]
 }
