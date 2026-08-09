@@ -57,7 +57,6 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/magnifying-glass.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
@@ -96,7 +95,6 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/component.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "text_first",
@@ -135,7 +133,6 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/shield-lightning.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
@@ -174,7 +171,6 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/gear-wrench.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "text_first",
@@ -213,7 +209,6 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/diagnose.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
@@ -265,107 +260,6 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "multicolumn_Xap4rt": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_VRKj3b": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/magnifying-glass.jpg",
-            "title": "Repair Defects",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_78E7gk": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/component.jpg",
-            "title": "Component Failure",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_KEVe6L": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/shield-lightning.jpg",
-            "title": "Power Surge",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_C66Ahi": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/gear-wrench.jpg",
-            "title": "Accidental Damage",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_f7VDYy": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/cycle.jpg",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_rphJcG": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/truck.jpg",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_riANe8": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/diagnose.jpg",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_VRKj3b",
-        "column_78E7gk",
-        "column_KEVe6L",
-        "column_C66Ahi",
-        "column_f7VDYy",
-        "column_rphJcG",
-        "column_riANe8"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "Multicolumn",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "Button label",
-        "button_link": "",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "none",
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
@@ -376,7 +270,6 @@
     "image_with_text_TXpwJi",
     "image_with_text_Rh3A3H",
     "image_with_text_jgQ6bq",
-    "image_with_text_Qzf3Vg",
-    "multicolumn_Xap4rt"
+    "image_with_text_Qzf3Vg"
   ]
 }
