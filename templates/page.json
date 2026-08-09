@@ -9,15 +9,215 @@
  */
 {
   "sections": {
+    "image_banner_hVPYEN": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/warranty-banner-lg.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
     "main": {
       "type": "main-page",
       "settings": {
         "padding_top": 0,
         "padding_bottom": 16
       }
+    },
+    "image_with_text_xCtyCY": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_eD9epC": {
+          "type": "heading",
+          "settings": {
+            "heading": "Workmanship Defects",
+            "heading_size": "h1"
+          }
+        },
+        "text_yPqCFp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If there is a defect in our work, we will fix it for free. Mistakes can and do happen from time to time but no worries, if we made a mistake it's covered</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_eD9epC",
+        "text_yPqCFp"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/magnifying-glass.jpg",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_8UakfR": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_Ewi9Di": {
+          "type": "heading",
+          "settings": {
+            "heading": "Component Failure",
+            "heading_size": "h1"
+          }
+        },
+        "text_mk7BwC": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If any of the components that we replace fail within the warranty period, you are covered! Some exclusion apply to special order components where vendor warranty supersedes our warranty. </p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Ewi9Di",
+        "text_mk7BwC"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/component.jpg",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_Xap4rt": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_VRKj3b": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/magnifying-glass.jpg",
+            "title": "Repair Defects",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_78E7gk": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/component.jpg",
+            "title": "Component Failure",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_KEVe6L": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/shield-lightning.jpg",
+            "title": "Power Surge",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_C66Ahi": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/gear-wrench.jpg",
+            "title": "Accidental Damage",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_f7VDYy": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/cycle.jpg",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_rphJcG": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/truck.jpg",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_riANe8": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/diagnose.jpg",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_VRKj3b",
+        "column_78E7gk",
+        "column_KEVe6L",
+        "column_C66Ahi",
+        "column_f7VDYy",
+        "column_rphJcG",
+        "column_riANe8"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Button label",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "image_banner_hVPYEN",
+    "main",
+    "image_with_text_xCtyCY",
+    "image_with_text_8UakfR",
+    "multicolumn_Xap4rt"
   ]
 }
