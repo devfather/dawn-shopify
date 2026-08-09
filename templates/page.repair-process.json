@@ -13,7 +13,7 @@
       "type": "image-banner",
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/repair-proccess.jpg",
+        "image": "shopify://shop_images/repair-proccess-light.jpg",
         "image_overlay_opacity": 0,
         "image_height": "small",
         "image_behavior": "none",
@@ -55,6 +55,7 @@
         "heading_eD9epC",
         "text_yPqCFp"
       ],
+      "custom_css": [],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/process-cart.jpg",
