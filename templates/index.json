@@ -48,85 +48,9 @@
         "show_text_below": false
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "collection": "all",
-        "products_to_show": 8,
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 4,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 44,
-        "padding_bottom": 36
-      }
-    },
     "brand_slider_NaxdBq": {
       "type": "brand-slider",
       "blocks": {
-        "brand_9YLCYR": {
-          "type": "brand",
-          "settings": {
-            "brand_name": "",
-            "link": "",
-            "open_in_new_tab": false
-          }
-        },
-        "brand_KnNzh8": {
-          "type": "brand",
-          "settings": {
-            "brand_name": "",
-            "link": "",
-            "open_in_new_tab": false
-          }
-        },
-        "brand_eHpxGR": {
-          "type": "brand",
-          "settings": {
-            "brand_name": "",
-            "link": "",
-            "open_in_new_tab": false
-          }
-        },
-        "brand_TVMFMf": {
-          "type": "brand",
-          "settings": {
-            "brand_name": "",
-            "link": "",
-            "open_in_new_tab": false
-          }
-        },
-        "brand_3nEYNj": {
-          "type": "brand",
-          "settings": {
-            "brand_name": "",
-            "link": "",
-            "open_in_new_tab": false
-          }
-        },
-        "brand_NLE84m": {
-          "type": "brand",
-          "settings": {
-            "brand_name": "",
-            "link": "",
-            "open_in_new_tab": false
-          }
-        },
         "brand_dAK6rK": {
           "type": "brand",
           "settings": {
@@ -405,23 +329,9 @@
             "link": "",
             "open_in_new_tab": false
           }
-        },
-        "brand_RwrPJV": {
-          "type": "brand",
-          "settings": {
-            "brand_name": "",
-            "link": "",
-            "open_in_new_tab": false
-          }
         }
       },
       "block_order": [
-        "brand_9YLCYR",
-        "brand_KnNzh8",
-        "brand_eHpxGR",
-        "brand_TVMFMf",
-        "brand_3nEYNj",
-        "brand_NLE84m",
         "brand_dAK6rK",
         "brand_HNFQKy",
         "brand_zDTnxG",
@@ -452,27 +362,54 @@
         "brand_bTpFpB",
         "brand_CRWymi",
         "brand_DUbrg3",
-        "brand_eVEHwY",
-        "brand_RwrPJV"
+        "brand_eVEHwY"
       ],
       "name": "t:sections.brand-slider.presets.name",
       "settings": {
-        "title": "Brands we work on",
+        "title": "Brands We Service",
         "heading_size": "h1",
         "heading_alignment": "center",
-        "logo_height": 48,
-        "logo_spacing": 48,
-        "scroll_speed": 30,
+        "logo_height": 52,
+        "logo_spacing": 32,
+        "scroll_speed": 40,
         "pause_on_hover": true,
         "color_scheme": "",
         "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "all",
+        "products_to_show": 8,
+        "title": "Featured products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 44,
         "padding_bottom": 36
       }
     }
   },
   "order": [
     "image_banner",
-    "featured_collection",
-    "brand_slider_NaxdBq"
+    "brand_slider_NaxdBq",
+    "featured_collection"
   ]
 }
