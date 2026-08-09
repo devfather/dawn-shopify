@@ -13,7 +13,7 @@
       "type": "image-banner",
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/warranty-banner-lg.jpg",
+        "image": "shopify://shop_images/repair-proccess.jpg",
         "image_overlay_opacity": 0,
         "image_height": "small",
         "image_behavior": "none",
