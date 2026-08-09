@@ -150,6 +150,45 @@
         "padding_bottom": 36
       }
     },
+    "image_with_text_Rh3A3H": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_yLF4LA": {
+          "type": "heading",
+          "settings": {
+            "heading": "Accidental Damage",
+            "heading_size": "h1"
+          }
+        },
+        "text_tFj64p": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Sometimes damage can occur that is caused by you or your technician when it's being reinstalled, and that's ok! Our warranty covers the labor to fix it again if your part is accidentally damaged.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_yLF4LA",
+        "text_tFj64p"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/gear-wrench.jpg",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "image_behavior": "zoom-in",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "multicolumn_Xap4rt": {
       "type": "multicolumn",
       "blocks": {
@@ -258,6 +297,7 @@
     "image_with_text_xCtyCY",
     "image_with_text_8UakfR",
     "image_with_text_TXpwJi",
+    "image_with_text_Rh3A3H",
     "multicolumn_Xap4rt"
   ]
 }
