@@ -430,14 +430,14 @@
         "heading_kTckeV": {
           "type": "heading",
           "settings": {
-            "heading": "Replacement Parts",
+            "heading": "Our Repair Process",
             "heading_size": "h1"
           }
         },
         "text_q9zr6d": {
           "type": "text",
           "settings": {
-            "text": "<p>We have millions of parts available ranging from OEM replacement parts to board level semiconductor components. </p>",
+            "text": "<p>Our repair process is simple, fast, and built to allow you to get your devices back up in running in no time.</p>",
             "text_style": "body"
           }
         },
