@@ -99,10 +99,36 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "product_metafield_list_fmPWhi": {
+      "type": "product-metafield-list",
+      "name": "t:sections.product-metafield-list.presets.name",
+      "settings": {
+        "metafield_list": "{{ product.metafields.custom.cross_reference_part_numbers | metafield_text }}",
+        "hide_when_empty": true,
+        "title": "Cross reference parts",
+        "heading_size": "h2",
+        "title_alignment": "left",
+        "separator": "full",
+        "separator_color": "#E3E3E3",
+        "separator_thickness": 4,
+        "item_style": "badge",
+        "text_style": "body",
+        "item_gap": 8,
+        "badge_background": "#111111",
+        "badge_text_color": "#ffffff",
+        "badge_padding_vertical": 6,
+        "badge_padding_horizontal": 12,
+        "badge_corners": "square",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "product_metafield_list_fmPWhi"
   ]
 }
