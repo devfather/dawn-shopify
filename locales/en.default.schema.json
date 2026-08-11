@@ -2845,16 +2845,9 @@
     "product-metafield-list": {
       "name": "Product metafield list",
       "settings": {
-        "paragraph": {
-          "content": "Shows a product list metafield (list of single line text). Hide automatically when empty."
-        },
-        "metafield_namespace": {
-          "label": "Metafield namespace",
-          "info": "Usually \"custom\""
-        },
-        "metafield_key": {
-          "label": "Metafield key",
-          "info": "Example: cross_reference_parts or compatible_model_numbers"
+        "metafield_list": {
+          "label": "Metafield list",
+          "info": "Click the dynamic source icon and choose your list metafield (for example Cross reference parts)"
         },
         "hide_when_empty": {
           "label": "Hide section when metafield is empty",

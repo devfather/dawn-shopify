@@ -1,13 +1,13 @@
 {{ 'section-product-metafield-list.css' | asset_url | stylesheet_tag }}
 
 {%- liquid
-  assign metafield_namespace = section.settings.metafield_namespace | strip
-  assign metafield_key = section.settings.metafield_key | strip
+  assign items_string = section.settings.metafield_list | strip_html | strip
   assign metafield_list = blank
   assign has_items = false
 
-  if product != blank and metafield_namespace != blank and metafield_key != blank
-    assign metafield_list = product.metafields[metafield_namespace][metafield_key].value
+  if items_string != blank
+    assign normalized_items = items_string | replace: ', and ', '|||' | replace: ' and ', '|||' | replace: ', ', '|||'
+    assign metafield_list = normalized_items | split: '|||'
   endif
 
   if metafield_list != blank and metafield_list.size > 0
@@ -68,13 +68,16 @@
       {%- if has_items -%}
         <ul class="product-metafield-list__items product-metafield-list__items--{{ section.settings.item_style }}" role="list">
           {%- for item in metafield_list -%}
-            <li class="product-metafield-list__item">
-              {%- if section.settings.item_style == 'badge' -%}
-                <span class="product-metafield-list__badge">{{ item | escape }}</span>
-              {%- else -%}
-                <span class="product-metafield-list__text {{ section.settings.text_style }}">{{ item | escape }}</span>
-              {%- endif -%}
-            </li>
+            {%- assign item_text = item | strip -%}
+            {%- if item_text != blank -%}
+              <li class="product-metafield-list__item">
+                {%- if section.settings.item_style == 'badge' -%}
+                  <span class="product-metafield-list__badge">{{ item_text | escape }}</span>
+                {%- else -%}
+                  <span class="product-metafield-list__text {{ section.settings.text_style }}">{{ item_text | escape }}</span>
+                {%- endif -%}
+              </li>
+            {%- endif -%}
           {%- endfor -%}
         </ul>
       {%- elsif request.design_mode -%}
@@ -90,11 +93,7 @@
           {%- endfor -%}
         </ul>
         <p class="product-metafield-list__editor-note">
-          {%- if metafield_key == blank -%}
-            {{ 'sections.product_metafield_list.editor_missing_key' | t }}
-          {%- else -%}
-            {{ 'sections.product_metafield_list.editor_empty' | t: namespace: metafield_namespace, key: metafield_key }}
-          {%- endif -%}
+          {{ 'sections.product_metafield_list.editor_connect_source' | t }}
         </p>
       {%- endif -%}
     </div>
@@ -111,21 +110,10 @@
   },
   "settings": [
     {
-      "type": "paragraph",
-      "content": "t:sections.product-metafield-list.settings.paragraph.content"
-    },
-    {
       "type": "text",
-      "id": "metafield_namespace",
-      "label": "t:sections.product-metafield-list.settings.metafield_namespace.label",
-      "info": "t:sections.product-metafield-list.settings.metafield_namespace.info",
-      "default": "custom"
-    },
-    {
-      "type": "text",
-      "id": "metafield_key",
-      "label": "t:sections.product-metafield-list.settings.metafield_key.label",
-      "info": "t:sections.product-metafield-list.settings.metafield_key.info"
+      "id": "metafield_list",
+      "label": "t:sections.product-metafield-list.settings.metafield_list.label",
+      "info": "t:sections.product-metafield-list.settings.metafield_list.info"
     },
     {
       "type": "checkbox",
@@ -374,7 +362,6 @@
     {
       "name": "t:sections.product-metafield-list.presets.name",
       "settings": {
-        "metafield_namespace": "custom",
         "title": "Cross reference parts"
       }
     }

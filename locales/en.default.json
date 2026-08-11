@@ -347,8 +347,7 @@
     },
     "product_metafield_list": {
       "placeholder_item": "Sample item {{ number }}",
-      "editor_missing_key": "Enter a metafield key in the section settings to load product list values.",
-      "editor_empty": "No values found for {{ namespace }}.{{ key }} on this product. Placeholder items are shown in the editor only."
+      "editor_connect_source": "Connect a product list metafield using the dynamic source icon next to Metafield list. Placeholder items are shown in the editor only."
     },
     "collection_template": {
       "empty": "No products found",
