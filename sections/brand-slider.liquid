@@ -38,7 +38,7 @@
         role="region"
         aria-label="{% if section.settings.title != blank %}{{ section.settings.title | strip_html | escape }}{% else %}{{ 'sections.brand_slider.carousel' | t }}{% endif %}"
       >
-        <div class="brand-slider__track{% if section.settings.pause_on_hover %} brand-slider__track--pause-on-hover{% endif %}">
+        <div class="brand-slider__track brand-slider__track--{{ section.settings.scroll_direction }}{% if section.settings.pause_on_hover %} brand-slider__track--pause-on-hover{% endif %}">
           {%- for i in (1..2) -%}
             {%- for block in section.blocks -%}
               {%- liquid
@@ -192,6 +192,22 @@
       "label": "t:sections.brand-slider.settings.scroll_speed.label",
       "info": "t:sections.brand-slider.settings.scroll_speed.info",
       "default": 30
+    },
+    {
+      "type": "select",
+      "id": "scroll_direction",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.brand-slider.settings.scroll_direction.options__1.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.brand-slider.settings.scroll_direction.options__2.label"
+        }
+      ],
+      "default": "left",
+      "label": "t:sections.brand-slider.settings.scroll_direction.label"
     },
     {
       "type": "checkbox",

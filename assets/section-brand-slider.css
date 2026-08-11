@@ -24,7 +24,11 @@
   display: flex;
   width: max-content;
   gap: var(--brand-slider-gap, 4rem);
-  animation: brand-slider-scroll var(--brand-slider-speed, 30s) linear infinite;
+  animation: brand-slider-scroll-left var(--brand-slider-speed, 30s) linear infinite;
+}
+
+.brand-slider__track--right {
+  animation-name: brand-slider-scroll-right;
 }
 
 .brand-slider__track--pause-on-hover:hover {
@@ -70,12 +74,21 @@
   height: auto;
 }
 
-@keyframes brand-slider-scroll {
+@keyframes brand-slider-scroll-left {
   from {
     transform: translateX(0);
   }
   to {
     transform: translateX(calc(-50% - var(--brand-slider-gap, 4rem) / 2));
+  }
+}
+
+@keyframes brand-slider-scroll-right {
+  from {
+    transform: translateX(calc(-50% - var(--brand-slider-gap, 4rem) / 2));
+  }
+  to {
+    transform: translateX(0);
   }
 }
 

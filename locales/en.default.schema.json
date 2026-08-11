@@ -534,6 +534,15 @@
           "label": "Scroll speed",
           "info": "Higher values scroll more slowly"
         },
+        "scroll_direction": {
+          "label": "Scroll direction",
+          "options__1": {
+            "label": "Right to left"
+          },
+          "options__2": {
+            "label": "Left to right"
+          }
+        },
         "pause_on_hover": {
           "label": "Pause on hover"
         }
