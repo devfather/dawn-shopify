@@ -55,14 +55,20 @@
               {{ section.settings.title }}
             </h2>
             {%- if section.settings.separator == 'title' -%}
-              <div class="product-metafield-list__separator" role="presentation"></div>
+              <div
+                class="product-metafield-list__separator"
+                style="display: block; width: 100%; height: {{ section.settings.separator_thickness }}px; background-color: {{ section.settings.separator_color }}; margin: 1rem 0 0; border: 0;"
+              ></div>
             {%- endif -%}
           </div>
         </div>
       {%- endunless -%}
 
       {%- if section.settings.separator == 'full' -%}
-        <div class="product-metafield-list__separator product-metafield-list__separator--full" role="presentation"></div>
+        <div
+          class="product-metafield-list__separator product-metafield-list__separator--full"
+          style="display: block; width: 100%; height: {{ section.settings.separator_thickness }}px; background-color: {{ section.settings.separator_color }}; margin: 0.75rem 0 2rem; border: 0;"
+        ></div>
       {%- endif -%}
 
       {%- if has_items -%}

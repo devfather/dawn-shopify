@@ -1,7 +1,7 @@
 .product-metafield-list__header {
   display: flex;
   width: 100%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
 }
 
 .product-metafield-list__header--left {
@@ -41,10 +41,10 @@
 .product-metafield-list__separator {
   display: block;
   width: 100%;
-  height: var(--pmf-separator-thickness, 1px);
-  margin-top: 1rem;
+  max-width: 100%;
   border: 0;
-  background-color: var(--pmf-separator-color, #e3e3e3);
+  padding: 0;
+  color: transparent;
 }
 
 .product-metafield-list__separator--full {
@@ -53,7 +53,7 @@
 }
 
 .product-metafield-list__header + .product-metafield-list__separator--full {
-  margin-top: -0.5rem;
+  margin-top: 0;
 }
 
 .product-metafield-list__items {
