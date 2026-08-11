@@ -1475,24 +1475,12 @@
         },
         "mobile_layout": {
           "label": "Layout",
+          "info": "Side by side keeps a 25% image and 75% text row on mobile only",
           "options__1": {
             "label": "Stack"
           },
           "options__2": {
             "label": "Side by side"
-          }
-        },
-        "mobile_image_width": {
-          "label": "Image width",
-          "info": "Applies when mobile layout is side by side",
-          "options__1": {
-            "label": "Small"
-          },
-          "options__2": {
-            "label": "Medium"
-          },
-          "options__3": {
-            "label": "Large"
           }
         },
         "mobile_content_alignment": {

@@ -14,6 +14,7 @@
 
 @media screen and (max-width: 749px) {
   .image-with-text--mobile-side-by-side .image-with-text__grid {
+    flex-wrap: nowrap;
     align-items: center;
   }
 
@@ -21,44 +22,37 @@
     flex-direction: row-reverse;
   }
 
-  .image-with-text--mobile-side-by-side .image-with-text__media-item--mobile-small {
-    width: 30%;
-    max-width: 30%;
+  .image-with-text--mobile-side-by-side .image-with-text__grid .image-with-text__media-item {
+    width: 25%;
+    max-width: 25%;
+    flex: 0 0 25%;
+    align-self: center;
   }
 
-  .image-with-text--mobile-side-by-side .image-with-text__media-item--mobile-medium {
-    width: 40%;
-    max-width: 40%;
-  }
-
-  .image-with-text--mobile-side-by-side .image-with-text__media-item--mobile-large {
-    width: 50%;
-    max-width: 50%;
-  }
-
-  .image-with-text--mobile-side-by-side .image-with-text__text-item {
-    width: auto;
-    max-width: none;
-    flex-grow: 1;
+  .image-with-text--mobile-side-by-side .image-with-text__grid .image-with-text__text-item {
+    width: 75%;
+    max-width: 75%;
+    flex: 0 0 75%;
   }
 
   .image-with-text--mobile-side-by-side .image-with-text__media {
+    width: 100%;
+    height: auto !important;
     min-height: 0;
+    aspect-ratio: 1 / 1;
+    padding-bottom: 0 !important;
     background: transparent;
   }
 
-  .image-with-text--mobile-side-by-side .image-with-text__media--small,
-  .image-with-text--mobile-side-by-side .image-with-text__media--medium,
-  .image-with-text--mobile-side-by-side .image-with-text__media--large {
-    height: auto;
-  }
-
-  .image-with-text--mobile-side-by-side .image-with-text__media img {
+  .image-with-text--mobile-side-by-side .image-with-text__media img,
+  .image-with-text--mobile-side-by-side .image-with-text__media .placeholder-svg {
     object-fit: contain;
   }
 
   .image-with-text--mobile-side-by-side .image-with-text__content {
-    padding: 1.2rem 1.5rem 1.5rem;
+    height: auto;
+    min-height: 0;
+    padding: 1rem 1.5rem;
   }
 
   .image-with-text--mobile-side-by-side.image-with-text--overlap .image-with-text__content {
