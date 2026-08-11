@@ -106,12 +106,12 @@
       "settings": {
         "metafield_list": "{{ product.metafields.custom.cross_reference_part_numbers | metafield_text }}",
         "hide_when_empty": true,
-        "title": "Cross reference parts",
+        "title": "Cross Reference Parts",
         "heading_size": "h2",
         "title_alignment": "left",
         "separator": "full",
-        "separator_color": "#E3E3E3",
-        "separator_thickness": 4,
+        "separator_color": "#e3e3e3",
+        "separator_thickness": 1,
         "item_style": "badge",
         "text_style": "body",
         "item_gap": 8,
@@ -124,11 +124,37 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "product_metafield_list_M4payE": {
+      "type": "product-metafield-list",
+      "name": "t:sections.product-metafield-list.presets.name",
+      "settings": {
+        "metafield_list": "{{ product.metafields.custom.compatible_model_numbers | metafield_text }}",
+        "hide_when_empty": true,
+        "title": "Compatible Model Numbers",
+        "heading_size": "h2",
+        "title_alignment": "left",
+        "separator": "full",
+        "separator_color": "#e3e3e3",
+        "separator_thickness": 1,
+        "item_style": "badge",
+        "text_style": "body",
+        "item_gap": 8,
+        "badge_background": "#111111",
+        "badge_text_color": "#ffffff",
+        "badge_padding_vertical": 6,
+        "badge_padding_horizontal": 12,
+        "badge_corners": "rounded",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "related-products",
-    "product_metafield_list_fmPWhi"
+    "product_metafield_list_fmPWhi",
+    "product_metafield_list_M4payE"
   ]
 }
