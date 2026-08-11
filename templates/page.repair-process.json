@@ -33,50 +33,6 @@
         "padding_bottom": 16
       }
     },
-    "image_text_row_mBDb8f": {
-      "type": "image-text-row",
-      "blocks": {
-        "heading_AwzxiA": {
-          "type": "heading",
-          "settings": {
-            "heading": "Create Repair Order",
-            "heading_size": "h1"
-          }
-        },
-        "text_bWk7gJ": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Creating your repair order is simple. Enter your part number into our search bar, select your repair service, and add it to your cart. Follow the checkout instructions, and your repair request can be created in just a few minutes. If you are unsure of your part number, contact us and we’ll be happy to help.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_daG8Bh": {
-          "type": "button",
-          "settings": {
-            "button_label": "",
-            "button_link": "",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_AwzxiA",
-        "text_bWk7gJ",
-        "button_daG8Bh"
-      ],
-      "name": "t:sections.image-text-row.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/process-cart-v2.jpg",
-        "image_alt": "",
-        "layout": "image-first",
-        "desktop_image_width": "small",
-        "content_alignment": "left",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "image_with_text_xCtyCY": {
       "type": "image-with-text",
       "blocks": {
@@ -355,7 +311,6 @@
   "order": [
     "image_banner_hVPYEN",
     "main",
-    "image_text_row_mBDb8f",
     "image_with_text_xCtyCY",
     "image_with_text_8UakfR",
     "image_with_text_TXpwJi",
