@@ -336,6 +336,9 @@
       "carousel": "Brand logos",
       "brand_logo": "Brand logo"
     },
+    "image_text_row": {
+      "image": "Row image"
+    },
     "collection_template": {
       "empty": "No products found",
       "title": "Collection",

@@ -1223,6 +1223,106 @@
         }
       }
     },
+    "image-text-row": {
+      "name": "Image text row",
+      "settings": {
+        "image": {
+          "label": "Image"
+        },
+        "image_alt": {
+          "label": "Image alt text",
+          "info": "Used when the uploaded image has no alt text"
+        },
+        "layout": {
+          "label": "Placement",
+          "options__1": {
+            "label": "Image first"
+          },
+          "options__2": {
+            "label": "Image second"
+          }
+        },
+        "desktop_image_width": {
+          "label": "Desktop image width",
+          "info": "Mobile always uses 25% image and 75% text",
+          "options__1": {
+            "label": "Small"
+          },
+          "options__2": {
+            "label": "Medium"
+          },
+          "options__3": {
+            "label": "Large"
+          }
+        },
+        "content_alignment": {
+          "label": "Content alignment",
+          "options__1": {
+            "label": "Left"
+          },
+          "options__2": {
+            "label": "Center"
+          },
+          "options__3": {
+            "label": "Right"
+          }
+        },
+        "header_colors": {
+          "content": "Colors"
+        },
+        "color_scheme": {
+          "label": "Row"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "Heading",
+          "settings": {
+            "heading": {
+              "label": "Heading",
+              "default": "Image text row"
+            }
+          }
+        },
+        "text": {
+          "name": "Text",
+          "settings": {
+            "text": {
+              "label": "Description",
+              "default": "<p>Share information about your brand with customers using this row layout on every screen size.</p>"
+            },
+            "text_style": {
+              "label": "Style",
+              "options__1": {
+                "label": "Body"
+              },
+              "options__2": {
+                "label": "Subtitle"
+              }
+            }
+          }
+        },
+        "button": {
+          "name": "Button",
+          "settings": {
+            "button_label": {
+              "label": "Label",
+              "default": "Button label",
+              "info": "Leave blank to hide"
+            },
+            "button_link": {
+              "label": "Link"
+            },
+            "outline_button": {
+              "label": "Use outline button style"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Image text row"
+      }
+    },
     "image-banner": {
       "name": "Image banner",
       "settings": {
@@ -1470,19 +1570,6 @@
           },
           "label": "Layout"
         },
-        "header_mobile": {
-          "content": "Mobile layout"
-        },
-        "mobile_layout": {
-          "label": "Layout",
-          "info": "Side by side keeps a 25% image and 75% text row on mobile only",
-          "options__1": {
-            "label": "Stack"
-          },
-          "options__2": {
-            "label": "Side by side"
-          }
-        },
         "mobile_content_alignment": {
           "options__1": {
             "label": "Left"
@@ -1493,7 +1580,7 @@
           "options__3": {
             "label": "Right"
           },
-          "label": "Content alignment"
+          "label": "Mobile alignment"
         }
       },
       "blocks": {
