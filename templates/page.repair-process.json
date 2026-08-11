@@ -68,7 +68,7 @@
         "desktop_content_alignment": "left",
         "mobile_layout": "stack",
         "mobile_image_width": "medium",
-        "mobile_content_alignment": "center",
+        "mobile_content_alignment": "left",
         "section_color_scheme": "scheme-1",
         "color_scheme": "scheme-1",
         "padding_top": 0,
