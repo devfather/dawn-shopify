@@ -1,0 +1,345 @@
+{{ 'section-product-metafield-list.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign metafield_namespace = section.settings.metafield_namespace | strip
+  assign metafield_key = section.settings.metafield_key | strip
+  assign metafield_list = blank
+
+  if product != blank and metafield_namespace != blank and metafield_key != blank
+    assign metafield_list = product.metafields[metafield_namespace][metafield_key].value
+  endif
+-%}
+
+{%- if metafield_list != blank and metafield_list.size > 0 -%}
+  {%- style -%}
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+    #shopify-section-{{ section.id }} {
+      --pmf-badge-bg: {{ section.settings.badge_background }};
+      --pmf-badge-text: {{ section.settings.badge_text_color }};
+      --pmf-badge-padding-y: {{ section.settings.badge_padding_vertical }}px;
+      --pmf-badge-padding-x: {{ section.settings.badge_padding_horizontal }}px;
+      --pmf-badge-radius: {% if section.settings.badge_corners == 'square' %}0{% elsif section.settings.badge_corners == 'rounded' %}0.4rem{% else %}999px{% endif %};
+      --pmf-item-gap: {{ section.settings.item_gap }}px;
+      --pmf-separator-thickness: {{ section.settings.separator_thickness }}px;
+      --pmf-separator-color: {{ section.settings.separator_color }};
+    }
+
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+  {%- endstyle -%}
+
+  <div class="product-metafield-list color-{{ section.settings.color_scheme }} gradient">
+    <div class="page-width section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      {%- unless section.settings.title == blank -%}
+        <div class="product-metafield-list__header product-metafield-list__header--{{ section.settings.title_alignment }}">
+          <div class="product-metafield-list__title-wrap">
+            <h2 class="product-metafield-list__title inline-richtext {{ section.settings.heading_size }}">
+              {{ section.settings.title }}
+            </h2>
+            {%- if section.settings.separator == 'title' -%}
+              <div class="product-metafield-list__separator" role="presentation"></div>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endunless -%}
+
+      {%- if section.settings.separator == 'full' -%}
+        <div class="product-metafield-list__separator product-metafield-list__separator--full" role="presentation"></div>
+      {%- endif -%}
+
+      <ul class="product-metafield-list__items product-metafield-list__items--{{ section.settings.item_style }}" role="list">
+        {%- for item in metafield_list -%}
+          <li class="product-metafield-list__item">
+            {%- if section.settings.item_style == 'badge' -%}
+              <span class="product-metafield-list__badge">{{ item | escape }}</span>
+            {%- else -%}
+              <span class="product-metafield-list__text {{ section.settings.text_style }}">{{ item | escape }}</span>
+            {%- endif -%}
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "t:sections.product-metafield-list.name",
+  "tag": "section",
+  "class": "section",
+  "enabled_on": {
+    "templates": ["product"]
+  },
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:sections.product-metafield-list.settings.paragraph.content"
+    },
+    {
+      "type": "text",
+      "id": "metafield_namespace",
+      "label": "t:sections.product-metafield-list.settings.metafield_namespace.label",
+      "info": "t:sections.product-metafield-list.settings.metafield_namespace.info",
+      "default": "custom"
+    },
+    {
+      "type": "text",
+      "id": "metafield_key",
+      "label": "t:sections.product-metafield-list.settings.metafield_key.label",
+      "info": "t:sections.product-metafield-list.settings.metafield_key.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.product-metafield-list.settings.header_title.content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "t:sections.product-metafield-list.settings.title.default",
+      "label": "t:sections.product-metafield-list.settings.title.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        },
+        {
+          "value": "hxl",
+          "label": "t:sections.all.heading_size.options__4.label"
+        },
+        {
+          "value": "hxxl",
+          "label": "t:sections.all.heading_size.options__5.label"
+        }
+      ],
+      "default": "h2",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "select",
+      "id": "title_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.product-metafield-list.settings.title_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.product-metafield-list.settings.title_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.product-metafield-list.settings.title_alignment.options__3.label"
+        }
+      ],
+      "default": "left",
+      "label": "t:sections.product-metafield-list.settings.title_alignment.label"
+    },
+    {
+      "type": "select",
+      "id": "separator",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:sections.product-metafield-list.settings.separator.options__1.label"
+        },
+        {
+          "value": "full",
+          "label": "t:sections.product-metafield-list.settings.separator.options__2.label"
+        },
+        {
+          "value": "title",
+          "label": "t:sections.product-metafield-list.settings.separator.options__3.label"
+        }
+      ],
+      "default": "full",
+      "label": "t:sections.product-metafield-list.settings.separator.label"
+    },
+    {
+      "type": "color",
+      "id": "separator_color",
+      "label": "t:sections.product-metafield-list.settings.separator_color.label",
+      "default": "#e3e3e3"
+    },
+    {
+      "type": "range",
+      "id": "separator_thickness",
+      "min": 1,
+      "max": 8,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.product-metafield-list.settings.separator_thickness.label",
+      "default": 1
+    },
+    {
+      "type": "header",
+      "content": "t:sections.product-metafield-list.settings.header_items.content"
+    },
+    {
+      "type": "select",
+      "id": "item_style",
+      "options": [
+        {
+          "value": "badge",
+          "label": "t:sections.product-metafield-list.settings.item_style.options__1.label"
+        },
+        {
+          "value": "text",
+          "label": "t:sections.product-metafield-list.settings.item_style.options__2.label"
+        }
+      ],
+      "default": "badge",
+      "label": "t:sections.product-metafield-list.settings.item_style.label"
+    },
+    {
+      "type": "select",
+      "id": "text_style",
+      "options": [
+        {
+          "value": "body",
+          "label": "t:sections.product-metafield-list.settings.text_style.options__1.label"
+        },
+        {
+          "value": "caption",
+          "label": "t:sections.product-metafield-list.settings.text_style.options__2.label"
+        },
+        {
+          "value": "subtitle",
+          "label": "t:sections.product-metafield-list.settings.text_style.options__3.label"
+        }
+      ],
+      "default": "body",
+      "label": "t:sections.product-metafield-list.settings.text_style.label",
+      "info": "t:sections.product-metafield-list.settings.text_style.info"
+    },
+    {
+      "type": "range",
+      "id": "item_gap",
+      "min": 4,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.product-metafield-list.settings.item_gap.label",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "t:sections.product-metafield-list.settings.header_badge.content"
+    },
+    {
+      "type": "color",
+      "id": "badge_background",
+      "label": "t:sections.product-metafield-list.settings.badge_background.label",
+      "default": "#111111"
+    },
+    {
+      "type": "color",
+      "id": "badge_text_color",
+      "label": "t:sections.product-metafield-list.settings.badge_text_color.label",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "badge_padding_vertical",
+      "min": 2,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.product-metafield-list.settings.badge_padding_vertical.label",
+      "default": 6
+    },
+    {
+      "type": "range",
+      "id": "badge_padding_horizontal",
+      "min": 4,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.product-metafield-list.settings.badge_padding_horizontal.label",
+      "default": 12
+    },
+    {
+      "type": "select",
+      "id": "badge_corners",
+      "options": [
+        {
+          "value": "square",
+          "label": "t:sections.product-metafield-list.settings.badge_corners.options__1.label"
+        },
+        {
+          "value": "rounded",
+          "label": "t:sections.product-metafield-list.settings.badge_corners.options__2.label"
+        },
+        {
+          "value": "pill",
+          "label": "t:sections.product-metafield-list.settings.badge_corners.options__3.label"
+        }
+      ],
+      "default": "rounded",
+      "label": "t:sections.product-metafield-list.settings.badge_corners.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.product-metafield-list.settings.header_colors.content"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.product-metafield-list.presets.name",
+      "settings": {
+        "metafield_namespace": "custom",
+        "title": "Cross reference parts"
+      }
+    }
+  ]
+}
+{% endschema %}

@@ -2842,6 +2842,120 @@
         "name": "Page"
       }
     },
+    "product-metafield-list": {
+      "name": "Product metafield list",
+      "settings": {
+        "paragraph": {
+          "content": "Shows a product list metafield (list of single line text). Hide automatically when empty."
+        },
+        "metafield_namespace": {
+          "label": "Metafield namespace",
+          "info": "Usually \"custom\""
+        },
+        "metafield_key": {
+          "label": "Metafield key",
+          "info": "Example: cross_reference_parts or compatible_model_numbers"
+        },
+        "header_title": {
+          "content": "Title"
+        },
+        "title": {
+          "label": "Heading",
+          "default": "Product details"
+        },
+        "title_alignment": {
+          "label": "Heading alignment",
+          "options__1": {
+            "label": "Left"
+          },
+          "options__2": {
+            "label": "Center"
+          },
+          "options__3": {
+            "label": "Right"
+          }
+        },
+        "separator": {
+          "label": "Separator line",
+          "options__1": {
+            "label": "None"
+          },
+          "options__2": {
+            "label": "Full width"
+          },
+          "options__3": {
+            "label": "Title width"
+          }
+        },
+        "separator_color": {
+          "label": "Separator color"
+        },
+        "separator_thickness": {
+          "label": "Separator thickness"
+        },
+        "header_items": {
+          "content": "Items"
+        },
+        "item_style": {
+          "label": "Item style",
+          "options__1": {
+            "label": "Badge"
+          },
+          "options__2": {
+            "label": "Text"
+          }
+        },
+        "text_style": {
+          "label": "Text style",
+          "info": "Used when item style is Text",
+          "options__1": {
+            "label": "Body"
+          },
+          "options__2": {
+            "label": "Caption"
+          },
+          "options__3": {
+            "label": "Subtitle"
+          }
+        },
+        "item_gap": {
+          "label": "Item spacing"
+        },
+        "header_badge": {
+          "content": "Badge style"
+        },
+        "badge_background": {
+          "label": "Background"
+        },
+        "badge_text_color": {
+          "label": "Text"
+        },
+        "badge_padding_vertical": {
+          "label": "Vertical padding"
+        },
+        "badge_padding_horizontal": {
+          "label": "Horizontal padding"
+        },
+        "badge_corners": {
+          "label": "Corners",
+          "options__1": {
+            "label": "Square"
+          },
+          "options__2": {
+            "label": "Rounded"
+          },
+          "options__3": {
+            "label": "Pill"
+          }
+        },
+        "header_colors": {
+          "content": "Colors"
+        }
+      },
+      "presets": {
+        "name": "Product metafield list"
+      }
+    },
     "quick-order-list": {
       "name": "Quick order list",
       "settings": {
