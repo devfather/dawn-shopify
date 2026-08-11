@@ -149,7 +149,7 @@
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "mobile_layout": "side-by-side",
-        "mobile_image_width": "medium",
+        "mobile_image_width": "small",
         "mobile_content_alignment": "left",
         "section_color_scheme": "",
         "color_scheme": "",
