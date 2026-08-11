@@ -1235,6 +1235,7 @@
         },
         "layout": {
           "label": "Placement",
+          "info": "Applies on desktop. On mobile the image sits behind the text.",
           "options__1": {
             "label": "Image first"
           },
@@ -1244,7 +1245,7 @@
         },
         "desktop_image_width": {
           "label": "Desktop image width",
-          "info": "Mobile always uses 25% image and 75% text",
+          "info": "Desktop only. Mobile uses a full-width background image.",
           "options__1": {
             "label": "Small"
           },
@@ -1266,6 +1267,13 @@
           "options__3": {
             "label": "Right"
           }
+        },
+        "header_mobile": {
+          "content": "Mobile layout"
+        },
+        "mobile_image_opacity": {
+          "label": "Background image opacity",
+          "info": "How strong the image appears behind the text on mobile"
         },
         "header_colors": {
           "content": "Colors"
