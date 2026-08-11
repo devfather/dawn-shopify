@@ -345,6 +345,11 @@
       "carousel": "Brand logos",
       "brand_logo": "Brand logo"
     },
+    "product_metafield_list": {
+      "placeholder_item": "Sample item {{ number }}",
+      "editor_missing_key": "Enter a metafield key in the section settings to load product list values.",
+      "editor_empty": "No values found for {{ namespace }}.{{ key }} on this product. Placeholder items are shown in the editor only."
+    },
     "collection_template": {
       "empty": "No products found",
       "title": "Collection",

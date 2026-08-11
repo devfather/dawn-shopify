@@ -2856,6 +2856,10 @@
           "label": "Metafield key",
           "info": "Example: cross_reference_parts or compatible_model_numbers"
         },
+        "hide_when_empty": {
+          "label": "Hide section when metafield is empty",
+          "info": "In the theme editor, placeholder items still show so you can style the section"
+        },
         "header_title": {
           "content": "Title"
         },

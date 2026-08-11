@@ -4,13 +4,23 @@
   assign metafield_namespace = section.settings.metafield_namespace | strip
   assign metafield_key = section.settings.metafield_key | strip
   assign metafield_list = blank
+  assign has_items = false
 
   if product != blank and metafield_namespace != blank and metafield_key != blank
     assign metafield_list = product.metafields[metafield_namespace][metafield_key].value
   endif
+
+  if metafield_list != blank and metafield_list.size > 0
+    assign has_items = true
+  endif
+
+  assign show_section = true
+  if section.settings.hide_when_empty and has_items == false and request.design_mode == false
+    assign show_section = false
+  endif
 -%}
 
-{%- if metafield_list != blank and metafield_list.size > 0 -%}
+{%- if show_section -%}
   {%- style -%}
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -55,17 +65,38 @@
         <div class="product-metafield-list__separator product-metafield-list__separator--full" role="presentation"></div>
       {%- endif -%}
 
-      <ul class="product-metafield-list__items product-metafield-list__items--{{ section.settings.item_style }}" role="list">
-        {%- for item in metafield_list -%}
-          <li class="product-metafield-list__item">
-            {%- if section.settings.item_style == 'badge' -%}
-              <span class="product-metafield-list__badge">{{ item | escape }}</span>
-            {%- else -%}
-              <span class="product-metafield-list__text {{ section.settings.text_style }}">{{ item | escape }}</span>
-            {%- endif -%}
-          </li>
-        {%- endfor -%}
-      </ul>
+      {%- if has_items -%}
+        <ul class="product-metafield-list__items product-metafield-list__items--{{ section.settings.item_style }}" role="list">
+          {%- for item in metafield_list -%}
+            <li class="product-metafield-list__item">
+              {%- if section.settings.item_style == 'badge' -%}
+                <span class="product-metafield-list__badge">{{ item | escape }}</span>
+              {%- else -%}
+                <span class="product-metafield-list__text {{ section.settings.text_style }}">{{ item | escape }}</span>
+              {%- endif -%}
+            </li>
+          {%- endfor -%}
+        </ul>
+      {%- elsif request.design_mode -%}
+        <ul class="product-metafield-list__items product-metafield-list__items--{{ section.settings.item_style }}" role="list">
+          {%- for i in (1..3) -%}
+            <li class="product-metafield-list__item">
+              {%- if section.settings.item_style == 'badge' -%}
+                <span class="product-metafield-list__badge">{{ 'sections.product_metafield_list.placeholder_item' | t: number: i }}</span>
+              {%- else -%}
+                <span class="product-metafield-list__text {{ section.settings.text_style }}">{{ 'sections.product_metafield_list.placeholder_item' | t: number: i }}</span>
+              {%- endif -%}
+            </li>
+          {%- endfor -%}
+        </ul>
+        <p class="product-metafield-list__editor-note">
+          {%- if metafield_key == blank -%}
+            {{ 'sections.product_metafield_list.editor_missing_key' | t }}
+          {%- else -%}
+            {{ 'sections.product_metafield_list.editor_empty' | t: namespace: metafield_namespace, key: metafield_key }}
+          {%- endif -%}
+        </p>
+      {%- endif -%}
     </div>
   </div>
 {%- endif -%}
@@ -95,6 +126,13 @@
       "id": "metafield_key",
       "label": "t:sections.product-metafield-list.settings.metafield_key.label",
       "info": "t:sections.product-metafield-list.settings.metafield_key.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_when_empty",
+      "default": true,
+      "label": "t:sections.product-metafield-list.settings.hide_when_empty.label",
+      "info": "t:sections.product-metafield-list.settings.hide_when_empty.info"
     },
     {
       "type": "header",

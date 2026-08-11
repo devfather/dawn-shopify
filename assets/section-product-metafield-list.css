@@ -90,3 +90,9 @@
   display: inline-block;
   color: rgb(var(--color-foreground));
 }
+
+.product-metafield-list__editor-note {
+  margin: 1.5rem 0 0;
+  color: rgba(var(--color-foreground), 0.65);
+  font-size: 1.3rem;
+}
