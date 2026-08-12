@@ -47,6 +47,7 @@
         },
         "description": {
           "type": "description",
+          "disabled": true,
           "settings": {}
         },
         "share": {
@@ -159,7 +160,7 @@
             "tab_label": "Description",
             "heading": "",
             "heading_size": "h2",
-            "content": "{{ product.description }}",
+            "content": "<p>This service is for {{ product.metafields.custom.brand.value.brand.value }} part number {{ product.metafields[\"shopify--facts\"].mpn.value }}. </p>{{ product.description }}",
             "custom_liquid": "",
             "button_label": "",
             "button_link": "",
