@@ -69,13 +69,13 @@
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
-        "media_size": "large",
+        "media_size": "small",
         "constrain_to_viewport": true,
         "media_fit": "contain",
         "gallery_layout": "stacked",
         "mobile_thumbnails": "hide",
         "media_position": "left",
-        "image_zoom": "lightbox",
+        "image_zoom": "none",
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 36,
@@ -149,12 +149,78 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "content_tabs_XKnaXT": {
+      "type": "content-tabs",
+      "blocks": {
+        "tab_gG9D7R": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "How it works",
+            "heading": "",
+            "heading_size": "h2",
+            "content": "<p>Share content for the first tab.</p>",
+            "custom_liquid": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "tab_bLpfiY": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "Warranty",
+            "heading": "",
+            "heading_size": "h2",
+            "content": "<p>Share content for the second tab.</p>",
+            "custom_liquid": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "tab_E8cjRJ": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "Tab 3",
+            "heading": "",
+            "heading_size": "h2",
+            "content": "<p>Share content for the third tab.</p>",
+            "custom_liquid": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "tab_gG9D7R",
+        "tab_bLpfiY",
+        "tab_E8cjRJ"
+      ],
+      "name": "t:sections.content-tabs.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "title_alignment": "left",
+        "tab_alignment": "left",
+        "active_tab_color": "#111111",
+        "separator_color": "#E3E3E3",
+        "separator_thickness": 1,
+        "enable_max_height": false,
+        "max_height": 320,
+        "accessibility_label": "Content tabs",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "related-products",
     "product_metafield_list_fmPWhi",
-    "product_metafield_list_M4payE"
+    "product_metafield_list_M4payE",
+    "content_tabs_XKnaXT"
   ]
 }
