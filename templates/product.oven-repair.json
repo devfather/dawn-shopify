@@ -179,13 +179,13 @@
             "button_style_secondary": false
           }
         },
-        "tab_E8cjRJ": {
+        "tab_Mi8CjP": {
           "type": "tab",
           "settings": {
-            "tab_label": "Tab 3",
+            "tab_label": "Disclosures",
             "heading": "",
             "heading_size": "h2",
-            "content": "<p>Share content for the third tab.</p>",
+            "content": "<p>Share information about your brand with customers.</p>",
             "custom_liquid": "",
             "button_label": "",
             "button_link": "",
@@ -196,7 +196,7 @@
       "block_order": [
         "tab_gG9D7R",
         "tab_bLpfiY",
-        "tab_E8cjRJ"
+        "tab_Mi8CjP"
       ],
       "name": "t:sections.content-tabs.presets.name",
       "settings": {
@@ -204,8 +204,11 @@
         "heading_size": "h2",
         "title_alignment": "left",
         "tab_alignment": "left",
+        "tab_label_size": "h2",
+        "tab_font_weight": "400",
+        "inactive_tab_color": "#767676",
         "active_tab_color": "#111111",
-        "separator_color": "#E3E3E3",
+        "separator_color": "#e3e3e3",
         "separator_thickness": 1,
         "enable_max_height": false,
         "max_height": 320,
