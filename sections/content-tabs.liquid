@@ -10,7 +10,9 @@
   #shopify-section-{{ section.id }} {
     --content-tabs-separator-thickness: {{ section.settings.separator_thickness }}px;
     --content-tabs-separator-color: {{ section.settings.separator_color }};
+    --content-tabs-inactive-color: {{ section.settings.inactive_tab_color }};
     --content-tabs-active-color: {{ section.settings.active_tab_color }};
+    --content-tabs-tab-weight: {{ section.settings.tab_font_weight }};
     {% if section.settings.enable_max_height %}
       --content-tabs-max-height: {{ section.settings.max_height }}px;
     {% endif %}
@@ -43,7 +45,7 @@
         >
           {%- for block in section.blocks -%}
             <button
-              class="content-tabs__tab{% if forloop.first %} is-active{% endif %}"
+              class="content-tabs__tab {{ section.settings.tab_label_size }}{% if forloop.first %} is-active{% endif %}"
               type="button"
               role="tab"
               id="ContentTabs-Tab-{{ section.id }}-{{ block.id }}"
@@ -215,6 +217,65 @@
       ],
       "default": "left",
       "label": "t:sections.content-tabs.settings.tab_alignment.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.content-tabs.settings.header_tab_style.content"
+    },
+    {
+      "type": "select",
+      "id": "tab_label_size",
+      "options": [
+        {
+          "value": "h3",
+          "label": "t:sections.content-tabs.settings.tab_label_size.options__1.label"
+        },
+        {
+          "value": "h2",
+          "label": "t:sections.content-tabs.settings.tab_label_size.options__2.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.content-tabs.settings.tab_label_size.options__3.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.content-tabs.settings.tab_label_size.options__4.label"
+        }
+      ],
+      "default": "h2",
+      "label": "t:sections.content-tabs.settings.tab_label_size.label",
+      "info": "t:sections.content-tabs.settings.tab_label_size.info"
+    },
+    {
+      "type": "select",
+      "id": "tab_font_weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "t:sections.content-tabs.settings.tab_font_weight.options__1.label"
+        },
+        {
+          "value": "500",
+          "label": "t:sections.content-tabs.settings.tab_font_weight.options__2.label"
+        },
+        {
+          "value": "600",
+          "label": "t:sections.content-tabs.settings.tab_font_weight.options__3.label"
+        },
+        {
+          "value": "700",
+          "label": "t:sections.content-tabs.settings.tab_font_weight.options__4.label"
+        }
+      ],
+      "default": "700",
+      "label": "t:sections.content-tabs.settings.tab_font_weight.label"
+    },
+    {
+      "type": "color",
+      "id": "inactive_tab_color",
+      "label": "t:sections.content-tabs.settings.inactive_tab_color.label",
+      "default": "#767676"
     },
     {
       "type": "color",

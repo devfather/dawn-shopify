@@ -766,6 +766,43 @@
             "label": "Right"
           }
         },
+        "header_tab_style": {
+          "content": "Tab style"
+        },
+        "tab_label_size": {
+          "label": "Tab label size",
+          "info": "Defaults to the same size as Product metafield list headings",
+          "options__1": {
+            "label": "Small"
+          },
+          "options__2": {
+            "label": "Medium"
+          },
+          "options__3": {
+            "label": "Large"
+          },
+          "options__4": {
+            "label": "Extra large"
+          }
+        },
+        "tab_font_weight": {
+          "label": "Tab label weight",
+          "options__1": {
+            "label": "Regular"
+          },
+          "options__2": {
+            "label": "Medium"
+          },
+          "options__3": {
+            "label": "Semi-bold"
+          },
+          "options__4": {
+            "label": "Bold"
+          }
+        },
+        "inactive_tab_color": {
+          "label": "Inactive tab color"
+        },
         "active_tab_color": {
           "label": "Active tab color"
         },
