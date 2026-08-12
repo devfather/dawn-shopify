@@ -153,6 +153,19 @@
     "content_tabs_XKnaXT": {
       "type": "content-tabs",
       "blocks": {
+        "tab_CfQeKi": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "Description",
+            "heading": "",
+            "heading_size": "h2",
+            "content": "{{ product.description }}",
+            "custom_liquid": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
         "tab_gG9D7R": {
           "type": "tab",
           "settings": {
@@ -194,6 +207,7 @@
         }
       },
       "block_order": [
+        "tab_CfQeKi",
         "tab_gG9D7R",
         "tab_bLpfiY",
         "tab_Mi8CjP"
