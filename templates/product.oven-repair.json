@@ -30,21 +30,21 @@
         "text_NN7ztk": {
           "type": "text",
           "settings": {
-            "text": "Brand: {{ product.metafields.custom.brand.value.brand.value }}",
+            "text": "Brand: <strong>{{ product.metafields.custom.brand.value.brand.value }}</strong>",
             "text_style": "body"
           }
         },
         "text_kyCXCL": {
           "type": "text",
           "settings": {
-            "text": "Part Number: {{ product.metafields[\"shopify--facts\"].mpn.value }}",
+            "text": "Part Number: <strong>{{ product.metafields[\"shopify--facts\"].mpn.value }}</strong>",
             "text_style": "body"
           }
         },
         "text_BnWneR": {
           "type": "text",
           "settings": {
-            "text": "Service Type: {{ product.metafields.custom.service_type.value }}",
+            "text": "Service Type: <strong>{{ product.metafields.custom.service_type.value }}</strong>",
             "text_style": "body"
           }
         },
