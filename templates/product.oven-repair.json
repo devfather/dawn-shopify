@@ -34,6 +34,20 @@
             "text_style": "body"
           }
         },
+        "text_kyCXCL": {
+          "type": "text",
+          "settings": {
+            "text": "Part Number: {{ product.metafields[\"shopify--facts\"].mpn.value }}",
+            "text_style": "body"
+          }
+        },
+        "text_BnWneR": {
+          "type": "text",
+          "settings": {
+            "text": "Service Type: {{ product.metafields.custom.service_type.value }}",
+            "text_style": "body"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -69,6 +83,8 @@
         "title",
         "price",
         "text_NN7ztk",
+        "text_kyCXCL",
+        "text_BnWneR",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
