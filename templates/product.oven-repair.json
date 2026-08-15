@@ -27,6 +27,13 @@
           "type": "price",
           "settings": {}
         },
+        "text_NN7ztk": {
+          "type": "text",
+          "settings": {
+            "text": "Brand: {{ product.metafields.custom.brand.value.brand.value }}",
+            "text_style": "body"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -61,6 +68,7 @@
         "vendor",
         "title",
         "price",
+        "text_NN7ztk",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
