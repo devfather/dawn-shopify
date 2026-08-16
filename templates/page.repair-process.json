@@ -284,11 +284,20 @@
             "text": "<p>Once your repaired part arrives, reinstall it and get your equipment back up and running. Our goal is to provide a reliable repair solution that saves you time and money.</p>",
             "text_style": "body"
           }
+        },
+        "button_4t6Frb": {
+          "type": "button",
+          "settings": {
+            "button_label": "Create Repair",
+            "button_link": "shopify://pages/our-services",
+            "button_style_secondary": false
+          }
         }
       },
       "block_order": [
         "heading_rHtmVt",
-        "text_thQLjt"
+        "text_thQLjt",
+        "button_4t6Frb"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
