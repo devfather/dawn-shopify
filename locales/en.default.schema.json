@@ -709,6 +709,22 @@
           "label": "Show collection title",
           "info": "Uses the collection name from Shopify"
         },
+        "title_color": {
+          "label": "Title text color",
+          "info": "Uses the color scheme text color when empty"
+        },
+        "title_icon": {
+          "label": "Title icon",
+          "options__1": {
+            "label": "None"
+          },
+          "options__2": {
+            "label": "Arrow"
+          },
+          "options__3": {
+            "label": "Caret"
+          }
+        },
         "title_overlay": {
           "label": "Overlay title on image"
         },
@@ -750,9 +766,6 @@
         },
         "title_container_padding": {
           "label": "Container padding"
-        },
-        "show_title_icon": {
-          "label": "Show arrow icon"
         },
         "header_mobile": {
           "content": "Mobile layout"

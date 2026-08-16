@@ -27,6 +27,9 @@
   #shopify-section-{{ section.id }} {
     --collection-title-container-bg: {{ title_container_bg }};
     --collection-title-container-padding: {{ section.settings.title_container_padding }}px;
+    {%- if section.settings.title_color != blank -%}
+      --collection-title-color: {{ section.settings.title_color }};
+    {%- endif -%}
   }
 {%- endstyle -%}
 
@@ -96,7 +99,7 @@
               title_position_vertical: section.settings.title_position_vertical,
               title_position_horizontal: section.settings.title_position_horizontal,
               show_title_container: section.settings.show_title_container,
-              show_title_icon: section.settings.show_title_icon
+              title_icon: section.settings.title_icon
             %}
           </li>
         {%- endfor -%}
@@ -256,6 +259,32 @@
       "info": "t:sections.collection-list.settings.show_collection_title.info"
     },
     {
+      "type": "color",
+      "id": "title_color",
+      "label": "t:sections.collection-list.settings.title_color.label",
+      "info": "t:sections.collection-list.settings.title_color.info"
+    },
+    {
+      "type": "select",
+      "id": "title_icon",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:sections.collection-list.settings.title_icon.options__1.label"
+        },
+        {
+          "value": "arrow",
+          "label": "t:sections.collection-list.settings.title_icon.options__2.label"
+        },
+        {
+          "value": "caret",
+          "label": "t:sections.collection-list.settings.title_icon.options__3.label"
+        }
+      ],
+      "default": "arrow",
+      "label": "t:sections.collection-list.settings.title_icon.label"
+    },
+    {
       "type": "checkbox",
       "id": "title_overlay",
       "default": false,
@@ -334,12 +363,6 @@
       "unit": "px",
       "label": "t:sections.collection-list.settings.title_container_padding.label",
       "default": 12
-    },
-    {
-      "type": "checkbox",
-      "id": "show_title_icon",
-      "default": true,
-      "label": "t:sections.collection-list.settings.show_title_icon.label"
     },
     {
       "type": "header",

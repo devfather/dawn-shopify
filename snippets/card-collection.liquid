@@ -13,7 +13,7 @@
   - title_position_vertical: {String} top|middle|bottom. Default: bottom (optional)
   - title_position_horizontal: {String} left|center|right. Default: left (optional)
   - show_title_container: {Boolean} Show a background container behind the title. Default: false (optional)
-  - show_title_icon: {Boolean} Show the arrow icon. Default: true (optional)
+  - title_icon: {String} none|arrow|caret. Default: arrow (optional)
 
   Usage:
   {% render 'card-collection' %}
@@ -51,8 +51,17 @@
   if show_title_container == nil
     assign show_title_container = false
   endif
-  if show_title_icon == nil
-    assign show_title_icon = true
+  if title_icon == blank
+    assign title_icon = 'arrow'
+  endif
+  assign show_title_icon = true
+  if title_icon == 'none'
+    assign show_title_icon = false
+  endif
+  if title_icon == 'caret'
+    assign title_icon_file = 'icon-caret.svg'
+  else
+    assign title_icon_file = 'icon-arrow.svg'
   endif
 
   assign collection_card_modifiers = ''
@@ -138,8 +147,8 @@
                     <span class="collection-card__title-text{% if show_title_container %} collection-card__title-box{% endif %}">
                       {{- card_collection.title | escape -}}
                       {%- if show_title_icon and card_collection.description == blank -%}
-                        <span class="icon-wrap">
-                          {{- 'icon-arrow.svg' | inline_asset_content -}}
+                        <span class="icon-wrap{% if title_icon == 'caret' %} collection-card__icon--caret{% endif %}">
+                          {{- title_icon_file | inline_asset_content -}}
                         </span>
                       {%- endif -%}
                     </span>
@@ -151,8 +160,8 @@
                     <span class="collection-card__title-text{% if show_title_container %} collection-card__title-box{% endif %}">
                       {{ 'onboarding.collection_title' | t }}
                       {%- if show_title_icon -%}
-                        <span class="icon-wrap">
-                          {{- 'icon-arrow.svg' | inline_asset_content -}}
+                        <span class="icon-wrap{% if title_icon == 'caret' %} collection-card__icon--caret{% endif %}">
+                          {{- title_icon_file | inline_asset_content -}}
                         </span>
                       {%- endif -%}
                     </span>
@@ -166,8 +175,8 @@
               <p class="card__caption">
                 {{- card_collection.description | strip_html | truncatewords: 12 -}}
                 {%- if show_title_icon -%}
-                  <span class="icon-wrap">
-                    {{- 'icon-arrow.svg' | inline_asset_content -}}
+                  <span class="icon-wrap{% if title_icon == 'caret' %} collection-card__icon--caret{% endif %}">
+                    {{- title_icon_file | inline_asset_content -}}
                   </span>
                 {%- endif -%}
               </p>
@@ -194,8 +203,8 @@
                     {{- card_collection.title | escape -}}
                     {%- if show_title_icon -%}
                       {%- if card_collection.featured_image or card_collection.description == blank -%}
-                        <span class="icon-wrap">
-                          {{- 'icon-arrow.svg' | inline_asset_content -}}
+                        <span class="icon-wrap{% if title_icon == 'caret' %} collection-card__icon--caret{% endif %}">
+                          {{- title_icon_file | inline_asset_content -}}
                         </span>
                       {%- endif -%}
                     {%- endif -%}
@@ -208,8 +217,8 @@
                   <span class="collection-card__title-text{% if show_title_container %} collection-card__title-box{% endif %}">
                     {{ 'onboarding.collection_title' | t }}
                     {%- if show_title_icon -%}
-                      <span class="icon-wrap">
-                        {{- 'icon-arrow.svg' | inline_asset_content -}}
+                      <span class="icon-wrap{% if title_icon == 'caret' %} collection-card__icon--caret{% endif %}">
+                        {{- title_icon_file | inline_asset_content -}}
                       </span>
                     {%- endif -%}
                   </span>
@@ -223,8 +232,8 @@
             <p class="card__caption">
               {{- card_collection.description | strip_html | truncatewords: 12 -}}
               {%- if show_title_icon -%}
-                <span class="icon-wrap">
-                  {{- 'icon-arrow.svg' | inline_asset_content -}}
+                <span class="icon-wrap{% if title_icon == 'caret' %} collection-card__icon--caret{% endif %}">
+                  {{- title_icon_file | inline_asset_content -}}
                 </span>
               {%- endif -%}
             </p>
@@ -241,8 +250,8 @@
                 <span class="collection-card__title-text{% if show_title_container %} collection-card__title-box{% endif %}">
                   {{ 'onboarding.collection_title' | t }}
                   {%- if show_title_icon -%}
-                    <span class="icon-wrap">
-                      {{- 'icon-arrow.svg' | inline_asset_content -}}
+                    <span class="icon-wrap{% if title_icon == 'caret' %} collection-card__icon--caret{% endif %}">
+                      {{- title_icon_file | inline_asset_content -}}
                     </span>
                   {%- endif -%}
                 </span>
