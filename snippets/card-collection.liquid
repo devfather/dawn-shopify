@@ -8,6 +8,12 @@
   - extend_height: {Boolean} Card height extends to available container space. Default: false (optional)
   - wrapper_class: {String} Wrapper class for card (optional)
   - placeholder_image: {String} Placeholder image when collection is empty (optional)
+  - show_collection_title: {Boolean} Show the collection title link. Default: true (optional)
+  - title_overlay: {Boolean} Overlay title on the image. Default: false (optional)
+  - title_position_vertical: {String} top|middle|bottom. Default: bottom (optional)
+  - title_position_horizontal: {String} left|center|right. Default: left (optional)
+  - show_title_container: {Boolean} Show a background container behind the title. Default: false (optional)
+  - show_title_icon: {Boolean} Show the arrow icon. Default: true (optional)
 
   Usage:
   {% render 'card-collection' %}
@@ -29,9 +35,44 @@
     assign card_color_scheme = settings.collection_card_color_scheme
     assign card_style = settings.collection_card_style
   endif
+
+  if show_collection_title == nil
+    assign show_collection_title = true
+  endif
+  if title_overlay == nil
+    assign title_overlay = false
+  endif
+  if title_position_vertical == blank
+    assign title_position_vertical = 'bottom'
+  endif
+  if title_position_horizontal == blank
+    assign title_position_horizontal = 'left'
+  endif
+  if show_title_container == nil
+    assign show_title_container = false
+  endif
+  if show_title_icon == nil
+    assign show_title_icon = true
+  endif
+
+  assign collection_card_modifiers = ''
+  if title_overlay
+    assign collection_card_modifiers = collection_card_modifiers | append: ' collection-card--title-overlay'
+    assign collection_card_modifiers = collection_card_modifiers | append: ' collection-card--title-v-' | append: title_position_vertical
+    assign collection_card_modifiers = collection_card_modifiers | append: ' collection-card--title-h-' | append: title_position_horizontal
+  endif
+  if show_title_container
+    assign collection_card_modifiers = collection_card_modifiers | append: ' collection-card--title-container'
+  endif
+  unless show_collection_title
+    assign collection_card_modifiers = collection_card_modifiers | append: ' collection-card--hide-title'
+  endunless
+  unless show_title_icon
+    assign collection_card_modifiers = collection_card_modifiers | append: ' collection-card--hide-icon'
+  endunless
 -%}
 
-<div class="card-wrapper animate-arrow {% if wrapper_class and wrapper_class != 'none' %}{{ wrapper_class }}{% else %}collection-card-wrapper{% endif %}">
+<div class="card-wrapper animate-arrow{% if wrapper_class and wrapper_class != 'none' %} {{ wrapper_class }}{% else %} collection-card-wrapper{% endif %}{{ collection_card_modifiers }}">
   <div
     class="
       card
@@ -93,23 +134,42 @@
                 class="full-unstyled-link"
               >
                 {%- if card_collection.title != blank -%}
-                  {{- card_collection.title | escape -}}
+                  {%- if show_collection_title -%}
+                    <span class="collection-card__title-text{% if show_title_container %} collection-card__title-box{% endif %}">
+                      {{- card_collection.title | escape -}}
+                      {%- if show_title_icon and card_collection.description == blank -%}
+                        <span class="icon-wrap">
+                          {{- 'icon-arrow.svg' | inline_asset_content -}}
+                        </span>
+                      {%- endif -%}
+                    </span>
+                  {%- else -%}
+                    <span class="visually-hidden">{{- card_collection.title | escape -}}</span>
+                  {%- endif -%}
                 {%- else -%}
-                  {{ 'onboarding.collection_title' | t }}
+                  {%- if show_collection_title -%}
+                    <span class="collection-card__title-text{% if show_title_container %} collection-card__title-box{% endif %}">
+                      {{ 'onboarding.collection_title' | t }}
+                      {%- if show_title_icon -%}
+                        <span class="icon-wrap">
+                          {{- 'icon-arrow.svg' | inline_asset_content -}}
+                        </span>
+                      {%- endif -%}
+                    </span>
+                  {%- else -%}
+                    <span class="visually-hidden">{{ 'onboarding.collection_title' | t }}</span>
+                  {%- endif -%}
                 {%- endif -%}
-                {%- if card_collection.description == blank -%}
+              </a>
+            </h3>
+            {%- if card_collection.description != blank and show_collection_title -%}
+              <p class="card__caption">
+                {{- card_collection.description | strip_html | truncatewords: 12 -}}
+                {%- if show_title_icon -%}
                   <span class="icon-wrap">
                     {{- 'icon-arrow.svg' | inline_asset_content -}}
                   </span>
-                {%- endif %}
-              </a>
-            </h3>
-            {%- if card_collection.description != blank -%}
-              <p class="card__caption">
-                {{- card_collection.description | strip_html | truncatewords: 12 -}}
-                <span class="icon-wrap">
-                  {{- 'icon-arrow.svg' | inline_asset_content -}}
-                </span>
+                {%- endif -%}
               </p>
             {%- endif -%}
           </div>
@@ -129,23 +189,44 @@
               class="full-unstyled-link"
             >
               {%- if card_collection.title != blank -%}
-                {{- card_collection.title | escape -}}
+                {%- if show_collection_title -%}
+                  <span class="collection-card__title-text{% if show_title_container %} collection-card__title-box{% endif %}">
+                    {{- card_collection.title | escape -}}
+                    {%- if show_title_icon -%}
+                      {%- if card_collection.featured_image or card_collection.description == blank -%}
+                        <span class="icon-wrap">
+                          {{- 'icon-arrow.svg' | inline_asset_content -}}
+                        </span>
+                      {%- endif -%}
+                    {%- endif -%}
+                  </span>
+                {%- else -%}
+                  <span class="visually-hidden">{{- card_collection.title | escape -}}</span>
+                {%- endif -%}
               {%- else -%}
-                {{ 'onboarding.collection_title' | t }}
+                {%- if show_collection_title -%}
+                  <span class="collection-card__title-text{% if show_title_container %} collection-card__title-box{% endif %}">
+                    {{ 'onboarding.collection_title' | t }}
+                    {%- if show_title_icon -%}
+                      <span class="icon-wrap">
+                        {{- 'icon-arrow.svg' | inline_asset_content -}}
+                      </span>
+                    {%- endif -%}
+                  </span>
+                {%- else -%}
+                  <span class="visually-hidden">{{ 'onboarding.collection_title' | t }}</span>
+                {%- endif -%}
               {%- endif -%}
-              {%- if card_collection.featured_image or card_collection.description == blank -%}
+            </a>
+          </h3>
+          {%- if card_collection.featured_image == null and card_collection.description != blank and show_collection_title -%}
+            <p class="card__caption">
+              {{- card_collection.description | strip_html | truncatewords: 12 -}}
+              {%- if show_title_icon -%}
                 <span class="icon-wrap">
                   {{- 'icon-arrow.svg' | inline_asset_content -}}
                 </span>
-              {%- endif %}
-            </a>
-          </h3>
-          {%- if card_collection.featured_image == null and card_collection.description != blank -%}
-            <p class="card__caption">
-              {{- card_collection.description | strip_html | truncatewords: 12 -}}
-              <span class="icon-wrap">
-                {{- 'icon-arrow.svg' | inline_asset_content -}}
-              </span>
+              {%- endif -%}
             </p>
           {%- endif -%}
         </div>
@@ -156,10 +237,18 @@
         <div class="card__information">
           <h3 class="card__heading card__heading--placeholder">
             <a role="link" aria-disabled="true" class="full-unstyled-link">
-              {{ 'onboarding.collection_title' | t }}
-              <span class="icon-wrap">
-                {{- 'icon-arrow.svg' | inline_asset_content -}}
-              </span>
+              {%- if show_collection_title -%}
+                <span class="collection-card__title-text{% if show_title_container %} collection-card__title-box{% endif %}">
+                  {{ 'onboarding.collection_title' | t }}
+                  {%- if show_title_icon -%}
+                    <span class="icon-wrap">
+                      {{- 'icon-arrow.svg' | inline_asset_content -}}
+                    </span>
+                  {%- endif -%}
+                </span>
+              {%- else -%}
+                <span class="visually-hidden">{{ 'onboarding.collection_title' | t }}</span>
+              {%- endif -%}
             </a>
           </h3>
         </div>

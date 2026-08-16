@@ -702,6 +702,58 @@
           "label": "\"View all\" button",
           "info": "Visible if list has more collections than shown"
         },
+        "header_collection_title": {
+          "content": "Collection title"
+        },
+        "show_collection_title": {
+          "label": "Show collection title",
+          "info": "Uses the collection name from Shopify"
+        },
+        "title_overlay": {
+          "label": "Overlay title on image"
+        },
+        "title_position_vertical": {
+          "label": "Vertical position",
+          "info": "Applies when overlay is enabled",
+          "options__1": {
+            "label": "Top"
+          },
+          "options__2": {
+            "label": "Middle"
+          },
+          "options__3": {
+            "label": "Bottom"
+          }
+        },
+        "title_position_horizontal": {
+          "label": "Horizontal position",
+          "info": "Applies when overlay is enabled",
+          "options__1": {
+            "label": "Left"
+          },
+          "options__2": {
+            "label": "Center"
+          },
+          "options__3": {
+            "label": "Right"
+          }
+        },
+        "show_title_container": {
+          "label": "Show title container"
+        },
+        "title_container_color": {
+          "label": "Container color",
+          "info": "Uses the section background color when empty"
+        },
+        "title_container_opacity": {
+          "label": "Container opacity"
+        },
+        "title_container_padding": {
+          "label": "Container padding"
+        },
+        "show_title_icon": {
+          "label": "Show arrow icon"
+        },
         "header_mobile": {
           "content": "Mobile layout"
         },

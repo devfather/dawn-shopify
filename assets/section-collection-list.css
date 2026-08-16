@@ -59,3 +59,93 @@
 .collection-list-view-all {
   margin-top: 2rem;
 }
+
+.collection-card--hide-icon .icon-wrap {
+  display: none;
+}
+
+.collection-card--hide-title:not(.collection-card--title-overlay) .card > .card__content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.collection-card--hide-title:not(.collection-card--title-overlay) .card > .card__content .card__information {
+  padding: 0;
+}
+
+.collection-card--title-container .collection-card__title-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: var(--collection-title-container-padding, 1.2rem);
+  background: var(--collection-title-container-bg, rgb(var(--color-background)));
+}
+
+.collection-card--title-container .collection-card__title-box .icon-wrap {
+  margin-left: 0;
+}
+
+.collection-card__title-text {
+  display: inline-flex;
+  align-items: center;
+}
+
+.collection-card--title-overlay .card {
+  position: relative;
+}
+
+.collection-card--title-overlay .card--media > .card__content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+.collection-card--title-overlay .card--media > .card__content .card__information {
+  grid-row-start: auto;
+  padding: 0;
+  width: auto;
+  max-width: 100%;
+}
+
+.collection-card--title-overlay.collection-card--title-v-top .card--media > .card__content {
+  align-items: flex-start;
+}
+
+.collection-card--title-overlay.collection-card--title-v-middle .card--media > .card__content {
+  align-items: center;
+}
+
+.collection-card--title-overlay.collection-card--title-v-bottom .card--media > .card__content {
+  align-items: flex-end;
+}
+
+.collection-card--title-overlay.collection-card--title-h-left .card--media > .card__content {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.collection-card--title-overlay.collection-card--title-h-center .card--media > .card__content {
+  justify-content: center;
+  text-align: center;
+}
+
+.collection-card--title-overlay.collection-card--title-h-right .card--media > .card__content {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.collection-card--title-overlay.collection-card--hide-title .card--media > .card__content {
+  padding: 0;
+}
+
