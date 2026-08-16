@@ -1440,6 +1440,9 @@
         "container_padding_horizontal": {
           "label": "Container padding horizontal"
         },
+        "container_radius": {
+          "label": "Container corner radius"
+        },
         "desktop_content_alignment": {
           "options__1": {
             "label": "Left"
@@ -1481,6 +1484,25 @@
             "heading": {
               "label": "Heading",
               "default": "Image banner"
+            },
+            "heading_color": {
+              "label": "Text color",
+              "info": "Uses the color scheme text color when empty."
+            },
+            "heading_case": {
+              "label": "Text case",
+              "options__1": {
+                "label": "Default"
+              },
+              "options__2": {
+                "label": "Uppercase"
+              },
+              "options__3": {
+                "label": "Capitalize"
+              },
+              "options__4": {
+                "label": "Lowercase"
+              }
             }
           }
         },
@@ -1502,6 +1524,25 @@
                 "label": "Uppercase"
               },
               "label": "Style"
+            },
+            "text_color": {
+              "label": "Text color",
+              "info": "Uses the color scheme text color when empty."
+            },
+            "text_case": {
+              "label": "Text case",
+              "options__1": {
+                "label": "Default"
+              },
+              "options__2": {
+                "label": "Uppercase"
+              },
+              "options__3": {
+                "label": "Capitalize"
+              },
+              "options__4": {
+                "label": "Lowercase"
+              }
             }
           }
         },

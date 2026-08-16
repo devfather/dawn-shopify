@@ -10,6 +10,23 @@
   text-align: center;
 }
 
+.banner__text-case--uppercase {
+  text-transform: uppercase;
+}
+
+.banner__text-case--capitalize {
+  text-transform: capitalize;
+}
+
+.banner__text-case--lowercase {
+  text-transform: lowercase;
+}
+
+.banner__text.banner__text--custom-color,
+.banner__text.banner__text--custom-color > * {
+  color: inherit;
+}
+
 /* Needed for gradient continuity with or without animation, the transform scopes the gradient to its container which happens already when animation are turned on */
 .banner__box.gradient {
   transform: perspective(0);

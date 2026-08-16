@@ -47,6 +47,13 @@
     padding: {{ section.settings.container_padding_vertical }}px {{ section.settings.container_padding_horizontal }}px;
   }
 
+  @media screen and (min-width: 750px) {
+    #Banner-{{ section.id }}:not(.banner--desktop-transparent) .banner__box {
+      border-radius: {{ section.settings.container_radius }}px;
+      --text-boxes-radius: {{ section.settings.container_radius }}px;
+    }
+  }
+
   {%- if custom_container_background -%}
     @media screen and (min-width: 750px) {
       #Banner-{{ section.id }}:not(.banner--desktop-transparent) .banner__box {
@@ -158,13 +165,22 @@
         {%- case block.type -%}
           {%- when 'heading' -%}
             <h2
-              class="banner__heading inline-richtext {{ block.settings.heading_size }}"
+              class="banner__heading inline-richtext {{ block.settings.heading_size }}{% if block.settings.heading_case != 'none' %} banner__text-case--{{ block.settings.heading_case }}{% endif %}"
+              {% if block.settings.heading_color != blank %}
+                style="color: {{ block.settings.heading_color }};"
+              {% endif %}
               {{ block.shopify_attributes }}
             >
               {{ block.settings.heading }}
             </h2>
           {%- when 'text' -%}
-            <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
+            <div
+              class="banner__text rte {{ block.settings.text_style }}{% if block.settings.text_case != 'none' %} banner__text-case--{{ block.settings.text_case }}{% endif %}{% if block.settings.text_color != blank %} banner__text--custom-color{% endif %}"
+              {% if block.settings.text_color != blank %}
+                style="color: {{ block.settings.text_color }};"
+              {% endif %}
+              {{ block.shopify_attributes }}
+            >
               <p>{{ block.settings.text }}</p>
             </div>
           {%- when 'buttons' -%}
@@ -397,6 +413,16 @@
       "default": 36
     },
     {
+      "type": "range",
+      "id": "container_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.image-banner.settings.container_radius.label",
+      "default": 0
+    },
+    {
       "type": "header",
       "content": "t:sections.image-banner.settings.mobile.content"
     },
@@ -472,6 +498,36 @@
           ],
           "default": "h1",
           "label": "t:sections.all.heading_size.label"
+        },
+        {
+          "type": "color",
+          "id": "heading_color",
+          "label": "t:sections.image-banner.blocks.heading.settings.heading_color.label",
+          "info": "t:sections.image-banner.blocks.heading.settings.heading_color.info"
+        },
+        {
+          "type": "select",
+          "id": "heading_case",
+          "options": [
+            {
+              "value": "none",
+              "label": "t:sections.image-banner.blocks.heading.settings.heading_case.options__1.label"
+            },
+            {
+              "value": "uppercase",
+              "label": "t:sections.image-banner.blocks.heading.settings.heading_case.options__2.label"
+            },
+            {
+              "value": "capitalize",
+              "label": "t:sections.image-banner.blocks.heading.settings.heading_case.options__3.label"
+            },
+            {
+              "value": "lowercase",
+              "label": "t:sections.image-banner.blocks.heading.settings.heading_case.options__4.label"
+            }
+          ],
+          "default": "none",
+          "label": "t:sections.image-banner.blocks.heading.settings.heading_case.label"
         }
       ]
     },
@@ -505,6 +561,36 @@
           ],
           "default": "body",
           "label": "t:sections.image-banner.blocks.text.settings.text_style.label"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "t:sections.image-banner.blocks.text.settings.text_color.label",
+          "info": "t:sections.image-banner.blocks.text.settings.text_color.info"
+        },
+        {
+          "type": "select",
+          "id": "text_case",
+          "options": [
+            {
+              "value": "none",
+              "label": "t:sections.image-banner.blocks.text.settings.text_case.options__1.label"
+            },
+            {
+              "value": "uppercase",
+              "label": "t:sections.image-banner.blocks.text.settings.text_case.options__2.label"
+            },
+            {
+              "value": "capitalize",
+              "label": "t:sections.image-banner.blocks.text.settings.text_case.options__3.label"
+            },
+            {
+              "value": "lowercase",
+              "label": "t:sections.image-banner.blocks.text.settings.text_case.options__4.label"
+            }
+          ],
+          "default": "none",
+          "label": "t:sections.image-banner.blocks.text.settings.text_case.label"
         }
       ]
     },
