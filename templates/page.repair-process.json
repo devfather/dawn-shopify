@@ -281,7 +281,7 @@
         "text_thQLjt": {
           "type": "text",
           "settings": {
-            "text": "<p>Once your repaired part arrives, reinstall it and get your equipment back up and running. Our goal is to provide a reliable repair solution that saves you time and money.</p>",
+            "text": "<p>Once your repaired part arrives, reinstall it and get your equipment back up and running. Our goal is to provide a reliable repair solution that saves you time and money.<br/><br/>Ready to start your repair? Click the button below to get started.</p>",
             "text_style": "body"
           }
         },
