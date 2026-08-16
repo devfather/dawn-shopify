@@ -15,8 +15,10 @@
         "heading_NTgCGF": {
           "type": "heading",
           "settings": {
-            "heading": "OUR SERVICES",
-            "heading_size": "h1"
+            "heading": "Services",
+            "heading_size": "h1",
+            "heading_color": "#01325A",
+            "heading_case": "uppercase"
           }
         }
       },
@@ -33,10 +35,11 @@
         "desktop_content_alignment": "center",
         "show_text_box": true,
         "color_scheme": "scheme-1",
-        "container_color": "#FFFFFF",
+        "container_color": "#ffffff",
         "container_opacity": 60,
         "container_padding_vertical": 12,
         "container_padding_horizontal": 20,
+        "container_radius": 0,
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "show_text_below": true
@@ -48,10 +51,52 @@
         "padding_top": 0,
         "padding_bottom": 16
       }
+    },
+    "collection_list_kiWfrg": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_NWUrLd": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_txLxmL": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_ahHhtK": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_NWUrLd",
+        "featured_collection_txLxmL",
+        "featured_collection_ahHhtK"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "Collections",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "image_banner_hVPYEN",
-    "main"
+    "main",
+    "collection_list_kiWfrg"
   ]
 }
