@@ -11,6 +11,18 @@
   "sections": {
     "image_banner_hVPYEN": {
       "type": "image-banner",
+      "blocks": {
+        "heading_NTgCGF": {
+          "type": "heading",
+          "settings": {
+            "heading": "OUR SERVICES",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_NTgCGF"
+      ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/lab1.jpg",
@@ -21,6 +33,10 @@
         "desktop_content_alignment": "center",
         "show_text_box": true,
         "color_scheme": "",
+        "container_color": "",
+        "container_opacity": 60,
+        "container_padding_vertical": 40,
+        "container_padding_horizontal": 36,
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "show_text_below": true
