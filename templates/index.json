@@ -16,7 +16,9 @@
           "type": "heading",
           "settings": {
             "heading": "The Next Generation of Repairability",
-            "heading_size": "h0"
+            "heading_size": "h0",
+            "heading_color": "#FFFFFF",
+            "heading_case": "none"
           }
         }
       },
@@ -30,8 +32,13 @@
         "image_behavior": "ambient",
         "desktop_content_position": "bottom-center",
         "desktop_content_alignment": "center",
-        "show_text_box": false,
-        "color_scheme": "scheme-3",
+        "show_text_box": true,
+        "color_scheme": "scheme-1",
+        "container_color": "#000000",
+        "container_opacity": 20,
+        "container_padding_vertical": 16,
+        "container_padding_horizontal": 16,
+        "container_radius": 0,
         "stack_images_on_mobile": false,
         "mobile_content_alignment": "center",
         "show_text_below": false
