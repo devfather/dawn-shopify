@@ -61,6 +61,12 @@
             "collection": "ovens"
           }
         },
+        "featured_collection_kLjHVD": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
         "featured_collection_txLxmL": {
           "type": "featured_collection",
           "settings": {
@@ -76,6 +82,7 @@
       },
       "block_order": [
         "featured_collection_NWUrLd",
+        "featured_collection_kLjHVD",
         "featured_collection_txLxmL",
         "featured_collection_ahHhtK"
       ],
@@ -87,6 +94,16 @@
         "columns_desktop": 3,
         "color_scheme": "",
         "show_view_all": false,
+        "show_collection_title": true,
+        "title_color": "#FFFFFF",
+        "title_icon": "arrow",
+        "title_overlay": true,
+        "title_position_vertical": "middle",
+        "title_position_horizontal": "center",
+        "show_title_container": true,
+        "title_container_color": "#000000",
+        "title_container_opacity": 70,
+        "title_container_padding": 12,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 36,
