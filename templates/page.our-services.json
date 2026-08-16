@@ -17,7 +17,7 @@
           "settings": {
             "heading": "Services",
             "heading_size": "h1",
-            "heading_color": "#01325A",
+            "heading_color": "#000000",
             "heading_case": "uppercase"
           }
         }
@@ -58,13 +58,13 @@
         "featured_collection_NWUrLd": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "ovens"
           }
         },
         "featured_collection_txLxmL": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "abs-modules"
           }
         },
         "featured_collection_ahHhtK": {
