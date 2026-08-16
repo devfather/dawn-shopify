@@ -1427,6 +1427,19 @@
         "show_text_box": {
           "label": "Container"
         },
+        "container_color": {
+          "label": "Container color",
+          "info": "Uses the color scheme background when empty."
+        },
+        "container_opacity": {
+          "label": "Container opacity"
+        },
+        "container_padding_vertical": {
+          "label": "Container padding vertical"
+        },
+        "container_padding_horizontal": {
+          "label": "Container padding horizontal"
+        },
         "desktop_content_alignment": {
           "options__1": {
             "label": "Left"
