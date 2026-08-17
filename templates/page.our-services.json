@@ -61,10 +61,10 @@
             "collection": "ovens"
           }
         },
-        "featured_collection_kLjHVD": {
+        "featured_collection_ahHhtK": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "stovetops-copy"
           }
         },
         "featured_collection_txLxmL": {
@@ -73,18 +73,46 @@
             "collection": "abs-modules"
           }
         },
-        "featured_collection_ahHhtK": {
+        "featured_collection_7D7EzB": {
           "type": "featured_collection",
           "settings": {
-            "collection": "stovetops-copy"
+            "collection": "dryers"
+          }
+        },
+        "featured_collection_TXrfMe": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "washing-machines"
+          }
+        },
+        "featured_collection_RDrJbY": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "refrigerators-copy"
+          }
+        },
+        "featured_collection_kLjHVD": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "abs-modules-copy"
+          }
+        },
+        "featured_collection_JVnnqz": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "dishwashers-copy"
           }
         }
       },
       "block_order": [
         "featured_collection_NWUrLd",
-        "featured_collection_kLjHVD",
+        "featured_collection_ahHhtK",
         "featured_collection_txLxmL",
-        "featured_collection_ahHhtK"
+        "featured_collection_7D7EzB",
+        "featured_collection_TXrfMe",
+        "featured_collection_RDrJbY",
+        "featured_collection_kLjHVD",
+        "featured_collection_JVnnqz"
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
@@ -95,7 +123,7 @@
         "color_scheme": "",
         "show_view_all": false,
         "show_collection_title": true,
-        "title_color": "#FFFFFF",
+        "title_color": "#ffffff",
         "title_icon": "arrow",
         "title_overlay": true,
         "title_position_vertical": "middle",
