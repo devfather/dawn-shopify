@@ -102,6 +102,12 @@
           "settings": {
             "collection": "dishwashers-copy"
           }
+        },
+        "featured_collection_HnmXpE": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "unlisted-device"
+          }
         }
       },
       "block_order": [
@@ -112,7 +118,8 @@
         "featured_collection_TXrfMe",
         "featured_collection_RDrJbY",
         "featured_collection_kLjHVD",
-        "featured_collection_JVnnqz"
+        "featured_collection_JVnnqz",
+        "featured_collection_HnmXpE"
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
