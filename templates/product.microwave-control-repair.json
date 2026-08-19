@@ -1,0 +1,268 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "text_NN7ztk": {
+          "type": "text",
+          "settings": {
+            "text": "Brand: <strong>{{ product.metafields.custom.brand.value.brand.value }}</strong>",
+            "text_style": "body"
+          }
+        },
+        "text_kyCXCL": {
+          "type": "text",
+          "settings": {
+            "text": "Part Number: <strong>{{ product.metafields[\"shopify--facts\"].mpn.value }}</strong>",
+            "text_style": "body"
+          }
+        },
+        "text_BnWneR": {
+          "type": "text",
+          "settings": {
+            "text": "Service Type: <strong>{{ product.metafields.custom.service_type.value }}</strong>",
+            "text_style": "body"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "price",
+        "text_NN7ztk",
+        "text_kyCXCL",
+        "text_BnWneR",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "description",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "mobile_thumbnails": "hide",
+        "media_position": "left",
+        "image_zoom": "none",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "product_metafield_list_fmPWhi": {
+      "type": "product-metafield-list",
+      "name": "t:sections.product-metafield-list.presets.name",
+      "settings": {
+        "metafield_list": "{{ product.metafields.custom.cross_reference_part_numbers | metafield_text }}",
+        "hide_when_empty": true,
+        "title": "Cross Reference Parts",
+        "heading_size": "h2",
+        "title_alignment": "left",
+        "separator": "full",
+        "separator_color": "#e3e3e3",
+        "separator_thickness": 1,
+        "item_style": "badge",
+        "text_style": "body",
+        "item_gap": 8,
+        "badge_background": "#111111",
+        "badge_text_color": "#ffffff",
+        "badge_padding_vertical": 6,
+        "badge_padding_horizontal": 12,
+        "badge_corners": "square",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "product_metafield_list_M4payE": {
+      "type": "product-metafield-list",
+      "name": "t:sections.product-metafield-list.presets.name",
+      "settings": {
+        "metafield_list": "{{ product.metafields.custom.compatible_model_numbers | metafield_text }}",
+        "hide_when_empty": true,
+        "title": "Compatible Model Numbers",
+        "heading_size": "h2",
+        "title_alignment": "left",
+        "separator": "full",
+        "separator_color": "#e3e3e3",
+        "separator_thickness": 1,
+        "item_style": "badge",
+        "text_style": "body",
+        "item_gap": 8,
+        "badge_background": "#111111",
+        "badge_text_color": "#ffffff",
+        "badge_padding_vertical": 6,
+        "badge_padding_horizontal": 12,
+        "badge_corners": "rounded",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "content_tabs_XKnaXT": {
+      "type": "content-tabs",
+      "blocks": {
+        "tab_CfQeKi": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "Description",
+            "heading": "",
+            "heading_size": "h2",
+            "content": "<p>This is for <strong>{{ product.metafields.custom.brand.value.brand.value }}</strong> part number <strong>{{ product.metafields[\"shopify--facts\"].mpn.value }}</strong>. </p>{{ product.description }}",
+            "custom_liquid": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "tab_gG9D7R": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "How it works",
+            "heading": "",
+            "heading_size": "h2",
+            "content": "<p>Share content for the first tab.</p>",
+            "custom_liquid": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "tab_bLpfiY": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "Warranty",
+            "heading": "",
+            "heading_size": "h2",
+            "content": "<p>Share content for the second tab.</p>",
+            "custom_liquid": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "tab_Mi8CjP": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "Disclosures",
+            "heading": "",
+            "heading_size": "h2",
+            "content": "<p>Share information about your brand with customers.</p>",
+            "custom_liquid": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "tab_CfQeKi",
+        "tab_gG9D7R",
+        "tab_bLpfiY",
+        "tab_Mi8CjP"
+      ],
+      "name": "t:sections.content-tabs.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "title_alignment": "left",
+        "tab_alignment": "left",
+        "tab_label_size": "h2",
+        "tab_font_weight": "400",
+        "inactive_tab_color": "#767676",
+        "active_tab_color": "#111111",
+        "separator_color": "#e3e3e3",
+        "separator_thickness": 1,
+        "enable_max_height": false,
+        "max_height": 320,
+        "accessibility_label": "Content tabs",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related-products",
+    "product_metafield_list_fmPWhi",
+    "product_metafield_list_M4payE",
+    "content_tabs_XKnaXT"
+  ]
+}
