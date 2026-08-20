@@ -15,7 +15,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "The Next Generation of Repairability",
+            "heading": "Your Repair Starts Here",
             "heading_size": "h0",
             "heading_color": "#ffffff",
             "heading_case": "none"
@@ -29,7 +29,7 @@
             "show_button_label": false,
             "background_color": "#ffffff",
             "text_color": "#121212",
-            "border_color": "#FFFFFF",
+            "border_color": "#ffffff",
             "border_width": 4,
             "border_radius": 4,
             "padding_vertical": 12,
