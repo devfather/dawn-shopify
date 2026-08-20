@@ -1,0 +1,87 @@
+{% comment %}
+  TRS parts / model / cross-reference search box.
+
+  Accepts:
+  - unique_id: {String} required unique id suffix
+  - placeholder: {String}
+  - show_button_label: {Boolean}
+  - button_label: {String}
+  - background_color: {Color}
+  - text_color: {Color}
+  - border_color: {Color}
+  - border_width: {Number}
+  - border_radius: {Number}
+  - padding_vertical: {Number}
+  - padding_horizontal: {Number}
+  - width_percent: {Number}
+  - horizontal_position: {String} left|center|right
+  - offset_vertical: {Number} px margin-top
+{% endcomment %}
+
+{%- liquid
+  assign unique_id = unique_id | default: 'search'
+  assign placeholder = placeholder | default: 'Search model, part, or cross-reference #'
+  assign button_label = button_label | default: 'Search'
+  assign show_button_label = show_button_label | default: false
+  assign background_color = background_color | default: '#ffffff'
+  assign text_color = text_color | default: '#121212'
+  assign border_color = border_color | default: '#121212'
+  assign border_width = border_width | default: 1
+  assign border_radius = border_radius | default: 4
+  assign padding_vertical = padding_vertical | default: 12
+  assign padding_horizontal = padding_horizontal | default: 16
+  assign width_percent = width_percent | default: 100
+  assign horizontal_position = horizontal_position | default: 'center'
+  assign offset_vertical = offset_vertical | default: 0
+-%}
+
+{{ 'trs-parts-search.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'trs-parts-search.js' | asset_url }}" defer></script>
+
+<trs-parts-search
+  class="trs-parts-search trs-parts-search__align-{{ horizontal_position }}"
+  style="
+    --trs-search-bg: {{ background_color }};
+    --trs-search-text: {{ text_color }};
+    --trs-search-border: {{ border_color }};
+    --trs-search-padding-y: {{ padding_vertical }}px;
+    --trs-search-padding-x: {{ padding_horizontal }}px;
+    --trs-search-radius: {{ border_radius }}px;
+    --trs-search-border-width: {{ border_width }}px;
+    --trs-search-width: {{ width_percent }}%;
+    --trs-search-offset-y: {{ offset_vertical }}px;
+  "
+  data-section-id="trs-parts-search-api"
+  data-min-chars="2"
+>
+  <form action="{{ routes.search_url }}" method="get" role="search" class="trs-parts-search__form">
+    <input type="hidden" name="type" value="product">
+    <input type="hidden" name="options[prefix]" value="last">
+    <label class="visually-hidden" for="TrsPartsSearch-{{ unique_id }}">{{ placeholder | escape }}</label>
+    <input
+      id="TrsPartsSearch-{{ unique_id }}"
+      class="trs-parts-search__input"
+      type="search"
+      name="q"
+      value=""
+      placeholder="{{ placeholder | escape }}"
+      autocomplete="off"
+      autocorrect="off"
+      autocapitalize="off"
+      spellcheck="false"
+      data-trs-search-input
+    >
+    <button type="submit" class="trs-parts-search__submit" aria-label="{{ button_label | escape }}">
+      <span class="trs-parts-search__submit-icon">
+        {{- 'icon-search.svg' | inline_asset_content -}}
+      </span>
+      {%- if show_button_label -%}
+        <span>{{ button_label | escape }}</span>
+      {%- endif -%}
+    </button>
+  </form>
+
+  <div class="trs-parts-search__results" data-trs-search-results role="listbox" aria-label="Search results">
+    <div class="trs-parts-search__status" data-trs-search-status hidden></div>
+  </div>
+</trs-parts-search>

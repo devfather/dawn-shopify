@@ -213,6 +213,25 @@
                 </a>
               {%- endif -%}
             </div>
+          {%- when 'parts_search' -%}
+            <div class="banner__parts-search" {{ block.shopify_attributes }}>
+              {% render 'trs-parts-search',
+                unique_id: block.id,
+                placeholder: block.settings.placeholder,
+                show_button_label: block.settings.show_button_label,
+                button_label: block.settings.button_label,
+                background_color: block.settings.background_color,
+                text_color: block.settings.text_color,
+                border_color: block.settings.border_color,
+                border_width: block.settings.border_width,
+                border_radius: block.settings.border_radius,
+                padding_vertical: block.settings.padding_vertical,
+                padding_horizontal: block.settings.padding_horizontal,
+                width_percent: block.settings.width_percent,
+                horizontal_position: block.settings.horizontal_position,
+                offset_vertical: block.settings.offset_vertical
+              %}
+            </div>
         {%- endcase -%}
       {%- endfor -%}
     </div>
@@ -642,6 +661,133 @@
           "id": "button_style_secondary_2",
           "default": false,
           "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_2.label"
+        }
+      ]
+    },
+    {
+      "type": "parts_search",
+      "name": "TRS parts search",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "placeholder",
+          "label": "Placeholder text",
+          "default": "Search model, part, or cross-reference #"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label",
+          "default": "Search"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_button_label",
+          "label": "Show button label",
+          "default": false
+        },
+        {
+          "type": "header",
+          "content": "Colors"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Font color",
+          "default": "#121212"
+        },
+        {
+          "type": "color",
+          "id": "border_color",
+          "label": "Border color",
+          "default": "#121212"
+        },
+        {
+          "type": "header",
+          "content": "Size & spacing"
+        },
+        {
+          "type": "range",
+          "id": "border_width",
+          "min": 0,
+          "max": 8,
+          "step": 1,
+          "unit": "px",
+          "label": "Border width",
+          "default": 1
+        },
+        {
+          "type": "range",
+          "id": "border_radius",
+          "min": 0,
+          "max": 40,
+          "step": 2,
+          "unit": "px",
+          "label": "Corner radius",
+          "default": 4
+        },
+        {
+          "type": "range",
+          "id": "padding_vertical",
+          "min": 4,
+          "max": 40,
+          "step": 2,
+          "unit": "px",
+          "label": "Padding vertical",
+          "default": 12
+        },
+        {
+          "type": "range",
+          "id": "padding_horizontal",
+          "min": 8,
+          "max": 48,
+          "step": 2,
+          "unit": "px",
+          "label": "Padding horizontal",
+          "default": 16
+        },
+        {
+          "type": "range",
+          "id": "width_percent",
+          "min": 40,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "Width within container",
+          "default": 100
+        },
+        {
+          "type": "header",
+          "content": "Position within container"
+        },
+        {
+          "type": "select",
+          "id": "horizontal_position",
+          "label": "Horizontal position",
+          "options": [
+            { "value": "left", "label": "Left" },
+            { "value": "center", "label": "Center" },
+            { "value": "right", "label": "Right" }
+          ],
+          "default": "center"
+        },
+        {
+          "type": "range",
+          "id": "offset_vertical",
+          "min": 0,
+          "max": 80,
+          "step": 4,
+          "unit": "px",
+          "label": "Vertical offset",
+          "info": "Adds space above the search box inside the banner content box. Use the banner Content position setting for overall placement on the image.",
+          "default": 0
         }
       ]
     }

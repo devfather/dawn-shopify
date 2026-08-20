@@ -1,0 +1,117 @@
+{% comment %}
+  JSON search endpoint rendered via Section Rendering API:
+  /search?q=QUERY&type=product&sections=trs-parts-search-api
+
+  Resolves:
+  - model_number metaobjects (by handleized query)
+  - native product search hits (part # in title/SKU/vendor)
+  - products whose cross_reference / compatible_model metafields contain the query
+    (checked on search result products + model-linked products)
+{% endcomment %}
+
+{%- liquid
+  assign raw_q = search.terms | default: '' | strip
+  assign q_down = raw_q | downcase
+  assign q_handle = raw_q | handleize
+  assign max_results = 12
+  assign results_count = 0
+-%}
+
+{%- capture results_json -%}
+[
+{%- assign first_item = true -%}
+
+{%- comment -%} Model number metaobject lookup {%- endcomment -%}
+{%- if q_handle != blank -%}
+  {%- assign model_entry = shop.metaobjects.model_number[q_handle] -%}
+  {%- if model_entry == blank and raw_q != blank -%}
+    {%- assign q_handle_alt = raw_q | strip | downcase | replace: ' ', '-' | replace: '/', '-' | replace: '_', '-' -%}
+    {%- assign model_entry = shop.metaobjects.model_number[q_handle_alt] -%}
+  {%- endif -%}
+
+  {%- if model_entry != blank -%}
+    {%- assign model_products = model_entry.products.value -%}
+    {%- if model_products != blank -%}
+      {%- for product in model_products -%}
+        {%- if results_count >= max_results -%}{%- break -%}{%- endif -%}
+        {%- unless first_item -%},{%- endunless -%}
+        {%- assign first_item = false -%}
+        {%- assign results_count = results_count | plus: 1 -%}
+        {
+          "group": "Model match",
+          "title": {{ product.title | json }},
+          "url": {{ product.url | json }},
+          "meta": {{ model_entry.model.value | default: raw_q | prepend: 'Model ' | json }},
+          "image": {% if product.featured_media %}{{ product.featured_media | image_url: width: 120 | json }}{% else %}null{% endif %}
+        }
+      {%- endfor -%}
+    {%- endif -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- comment -%} Native product search (part numbers in title/SKU, etc.) {%- endcomment -%}
+{%- if search.performed -%}
+  {%- for item in search.results -%}
+    {%- if results_count >= max_results -%}{%- break -%}{%- endif -%}
+    {%- if item.object_type != 'product' -%}{%- continue -%}{%- endif -%}
+
+    {%- assign already = false -%}
+    {%- if model_products != blank -%}
+      {%- for product in model_products -%}
+        {%- if product.id == item.id -%}
+          {%- assign already = true -%}
+          {%- break -%}
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endif -%}
+    {%- if already -%}{%- continue -%}{%- endif -%}
+
+    {%- assign match_meta = 'Part / catalog match' -%}
+    {%- assign xref_mf = item.metafields.custom.cross_reference_part_numbers -%}
+    {%- assign models_mf = item.metafields.custom.compatible_model_numbers -%}
+    {%- assign models_all_mf = item.metafields.custom.compatible_model_numbers_all -%}
+
+    {%- if xref_mf != blank -%}
+      {%- assign xref_blob = xref_mf.value | join: ' ' | downcase -%}
+      {%- if xref_blob contains q_down -%}
+        {%- assign match_meta = 'Cross-reference match' -%}
+      {%- endif -%}
+    {%- endif -%}
+    {%- if models_mf != blank -%}
+      {%- assign models_blob = models_mf.value | join: ' ' | downcase -%}
+      {%- if models_blob contains q_down -%}
+        {%- assign match_meta = 'Compatible model match' -%}
+      {%- endif -%}
+    {%- endif -%}
+    {%- if models_all_mf != blank -%}
+      {%- assign models_all_blob = models_all_mf.value | downcase -%}
+      {%- if models_all_blob contains q_down -%}
+        {%- assign match_meta = 'Compatible model match' -%}
+      {%- endif -%}
+    {%- endif -%}
+
+    {%- unless first_item -%},{%- endunless -%}
+    {%- assign first_item = false -%}
+    {%- assign results_count = results_count | plus: 1 -%}
+    {
+      "group": "Products",
+      "title": {{ item.title | json }},
+      "url": {{ item.url | json }},
+      "meta": {{ match_meta | json }},
+      "image": {% if item.featured_media %}{{ item.featured_media | image_url: width: 120 | json }}{% else %}null{% endif %}
+    }
+  {%- endfor -%}
+{%- endif -%}
+]
+{%- endcapture -%}
+
+<div data-trs-parts-search-json type="application/json">
+  {"query":{{ raw_q | json }},"results":{{ results_json | strip_newlines }}}
+</div>
+
+{% schema %}
+{
+  "name": "TRS parts search API",
+  "settings": []
+}
+{% endschema %}
