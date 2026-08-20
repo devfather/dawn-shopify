@@ -17,20 +17,39 @@
           "settings": {
             "heading": "The Next Generation of Repairability",
             "heading_size": "h0",
-            "heading_color": "#FFFFFF",
+            "heading_color": "#ffffff",
             "heading_case": "none"
+          }
+        },
+        "parts_search_necUxE": {
+          "type": "parts_search",
+          "settings": {
+            "placeholder": "Search model, part, or cross-reference #",
+            "button_label": "Search",
+            "show_button_label": false,
+            "background_color": "#ffffff",
+            "text_color": "#121212",
+            "border_color": "#FFFFFF",
+            "border_width": 4,
+            "border_radius": 4,
+            "padding_vertical": 12,
+            "padding_horizontal": 16,
+            "width_percent": 100,
+            "horizontal_position": "center",
+            "offset_vertical": 0
           }
         }
       },
       "block_order": [
-        "heading"
+        "heading",
+        "parts_search_necUxE"
       ],
       "settings": {
         "image": "shopify://shop_images/lab1.jpg",
         "image_overlay_opacity": 10,
         "image_height": "large",
         "image_behavior": "ambient",
-        "desktop_content_position": "bottom-center",
+        "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
         "show_text_box": true,
         "color_scheme": "scheme-1",
