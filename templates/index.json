@@ -54,7 +54,7 @@
         "show_text_box": true,
         "color_scheme": "scheme-1",
         "container_color": "#000000",
-        "container_opacity": 20,
+        "container_opacity": 70,
         "container_padding_vertical": 16,
         "container_padding_horizontal": 16,
         "container_radius": 0,
