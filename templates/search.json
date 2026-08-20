@@ -1,9 +1,20 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-search",
+      "disabled": true,
       "settings": {
         "columns_desktop": 4,
+        "columns_mobile": "2",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": false,
@@ -14,13 +25,38 @@
         "enable_sorting": true,
         "article_show_date": true,
         "article_show_author": false,
-        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "trs_parts_search_hX4chL": {
+      "type": "trs-parts-search",
+      "name": "TRS parts search",
+      "settings": {
+        "heading": "Find your control board",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "placeholder": "Search model, part, or cross-reference #",
+        "button_label": "Search",
+        "show_button_label": false,
+        "background_color": "#ffffff",
+        "text_color": "#121212",
+        "border_color": "#121212",
+        "border_width": 1,
+        "border_radius": 4,
+        "padding_vertical": 12,
+        "padding_horizontal": 16,
+        "width_percent": 100,
+        "horizontal_position": "center",
+        "offset_vertical": 0,
+        "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "trs_parts_search_hX4chL"
   ]
 }
