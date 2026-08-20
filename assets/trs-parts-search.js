@@ -184,15 +184,22 @@ class TrsPartsSearch extends HTMLElement {
   }
 
   setStatus(text) {
-    if (!this.status) return;
+    if (!this.results) return;
+    let status = this.results.querySelector('[data-trs-search-status]');
+    if (!status) {
+      status = document.createElement('div');
+      status.className = 'trs-parts-search__status';
+      status.setAttribute('data-trs-search-status', '');
+      this.results.appendChild(status);
+    }
+    this.status = status;
     if (!text) {
-      this.status.hidden = true;
-      this.status.textContent = '';
+      status.hidden = true;
+      status.textContent = '';
       return;
     }
-    this.status.hidden = false;
-    this.status.textContent = text;
-    if (!this.status.parentElement) this.results.appendChild(this.status);
+    status.hidden = false;
+    status.textContent = text;
   }
 
   openResults() {

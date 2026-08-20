@@ -8,10 +8,13 @@
   --trs-search-radius: 4px;
   --trs-search-border-width: 1px;
   --trs-search-width: 100%;
+  /* Custom elements default to inline — without block, the absolute
+     results panel collapses to a ~0px-wide vertical line. */
+  display: block;
   position: relative;
   width: var(--trs-search-width);
   max-width: 100%;
-  z-index: 2;
+  z-index: 5;
 }
 
 .trs-parts-search__align-left {
@@ -95,8 +98,10 @@
 .trs-parts-search__results {
   position: absolute;
   left: 0;
-  right: 0;
   top: calc(100% + 0.6rem);
+  width: 100%;
+  min-width: 100%;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -106,8 +111,11 @@
   border-radius: var(--trs-search-radius);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   max-height: min(70vh, 28rem);
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
   display: none;
+  z-index: 30;
+  text-align: left;
 }
 
 .trs-parts-search__results.is-open {
@@ -186,4 +194,11 @@
 
 .banner__box .trs-parts-search {
   margin-top: var(--trs-search-offset-y, 0px);
+}
+
+/* Let the dropdown paint outside the banner content box */
+.banner__box:has(.trs-parts-search),
+.banner__content:has(.trs-parts-search),
+.banner__parts-search {
+  overflow: visible;
 }
