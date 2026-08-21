@@ -16,7 +16,7 @@
           "type": "heading",
           "settings": {
             "heading": "Lets Help You Fix Something",
-            "heading_size": "h0",
+            "heading_size": "h1",
             "heading_color": "#ffffff",
             "heading_case": "none"
           }
