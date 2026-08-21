@@ -55,9 +55,9 @@
         "color_scheme": "scheme-4",
         "container_color": "",
         "container_opacity": 70,
-        "container_padding_vertical": 16,
-        "container_padding_horizontal": 16,
-        "container_radius": 0,
+        "container_padding_vertical": 28,
+        "container_padding_horizontal": 72,
+        "container_radius": 8,
         "stack_images_on_mobile": false,
         "mobile_content_alignment": "center",
         "show_text_below": true
