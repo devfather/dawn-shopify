@@ -58,7 +58,7 @@
         "container_padding_vertical": 28,
         "container_padding_horizontal": 72,
         "container_radius": 8,
-        "stack_images_on_mobile": false,
+        "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "show_text_below": true
       }
