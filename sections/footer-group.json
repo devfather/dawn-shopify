@@ -17,8 +17,8 @@
         "logo": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/Artboard_2_1.png",
-            "image_width": 220,
+            "image": "shopify://shop_images/logo_white.svg",
+            "image_width": 150,
             "link": "/"
           }
         },
