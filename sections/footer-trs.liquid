@@ -1,0 +1,738 @@
+{{ 'section-footer-trs.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .footer-trs-{{ section.id }} {
+    --footer-trs-accent: {{ section.settings.accent_color }};
+    --footer-trs-text: {{ section.settings.text_color }};
+    --footer-trs-muted: {{ section.settings.muted_color }};
+    --footer-trs-heading: {{ section.settings.heading_color }};
+    margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
+  }
+
+  .footer-trs-{{ section.id }} .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .footer-trs-{{ section.id }} {
+      margin-top: {{ section.settings.margin_top }}px;
+    }
+
+    .footer-trs-{{ section.id }} .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign left_blocks = section.blocks | where: 'type', 'logo'
+  assign social_blocks = section.blocks | where: 'type', 'social'
+  assign contact_blocks = section.blocks | where: 'type', 'contact'
+  assign quick_blocks = section.blocks | where: 'type', 'quick_links'
+  assign link_blocks = section.blocks | where: 'type', 'link'
+  assign payment_blocks = section.blocks | where: 'type', 'payment'
+
+  assign has_social_icons = false
+  if settings.social_facebook_link != blank or settings.social_instagram_link != blank or settings.social_youtube_link != blank or settings.social_tiktok_link != blank or settings.social_twitter_link != blank or settings.social_pinterest_link != blank or settings.social_snapchat_link != blank or settings.social_tumblr_link != blank or settings.social_vimeo_link != blank
+    assign has_social_icons = true
+  endif
+-%}
+
+<footer
+  class="footer-trs footer-trs-{{ section.id }} color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding"
+  role="contentinfo"
+>
+  <div class="page-width">
+    <div class="footer-trs__inner">
+      <div class="footer-trs__col footer-trs__col--brand">
+        {%- for block in left_blocks -%}
+          <div class="footer-trs__block footer-trs__block--logo" {{ block.shopify_attributes }}>
+            {%- if block.settings.image != blank -%}
+              {%- assign logo_alt = block.settings.image.alt | default: shop.name -%}
+              <div class="footer-trs__logo" style="max-width: {{ block.settings.image_width }}px;">
+                {%- if block.settings.link != blank -%}
+                  <a href="{{ block.settings.link }}" aria-label="{{ logo_alt | escape }}">
+                    {{
+                      block.settings.image
+                      | image_url: width: 800
+                      | image_tag:
+                        loading: 'lazy',
+                        widths: '160, 240, 320, 480, 640, 800',
+                        sizes: '(min-width: 990px) 320px, 70vw',
+                        alt: logo_alt
+                    }}
+                  </a>
+                {%- else -%}
+                  {{
+                    block.settings.image
+                    | image_url: width: 800
+                    | image_tag:
+                      loading: 'lazy',
+                      widths: '160, 240, 320, 480, 640, 800',
+                      sizes: '(min-width: 990px) 320px, 70vw',
+                      alt: logo_alt
+                  }}
+                {%- endif -%}
+              </div>
+            {%- else -%}
+              <div class="footer-trs__logo">
+                <span class="h4">{{ shop.name }}</span>
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+
+        {%- for block in social_blocks -%}
+          {%- if has_social_icons -%}
+            {%- style -%}
+              .footer-trs-{{ section.id }} .footer-trs__social--{{ block.id }} {
+                --footer-trs-social-size: {{ block.settings.icon_size }}px;
+                --footer-trs-social-icon: {{ block.settings.icon_color }};
+                --footer-trs-social-border: {{ block.settings.border_color }};
+                --footer-trs-social-bg: {{ block.settings.background_color }};
+                --footer-trs-social-border-width: {{ block.settings.border_width }}px;
+                --footer-trs-social-gap: {{ block.settings.gap }}px;
+              }
+            {%- endstyle -%}
+            <div class="footer-trs__block footer-trs__block--social" {{ block.shopify_attributes }}>
+              <ul class="footer-trs__social footer-trs__social--{{ block.id }}" role="list">
+                {%- if settings.social_facebook_link != blank -%}
+                  <li>
+                    <a
+                      href="{{ settings.social_facebook_link }}"
+                      class="footer-trs__social-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span class="svg-wrapper">{{- 'icon-facebook.svg' | inline_asset_content -}}</span>
+                      <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
+                    </a>
+                  </li>
+                {%- endif -%}
+                {%- if settings.social_instagram_link != blank -%}
+                  <li>
+                    <a
+                      href="{{ settings.social_instagram_link }}"
+                      class="footer-trs__social-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span class="svg-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <path d="M10 6.667A3.333 3.333 0 1 0 10 13.333 3.333 3.333 0 0 0 10 6.667Zm0 5.5A2.167 2.167 0 1 1 10 7.833a2.167 2.167 0 0 1 0 4.334Z"/>
+                          <path d="M13.917 2.5H6.083A3.583 3.583 0 0 0 2.5 6.083v7.834A3.583 3.583 0 0 0 6.083 17.5h7.834A3.583 3.583 0 0 0 17.5 13.917V6.083A3.583 3.583 0 0 0 13.917 2.5Zm2.416 11.417a2.417 2.417 0 0 1-2.416 2.416H6.083a2.417 2.417 0 0 1-2.416-2.416V6.083A2.417 2.417 0 0 1 6.083 3.667h7.834a2.417 2.417 0 0 1 2.416 2.416v7.834Z"/>
+                          <circle cx="14.167" cy="5.833" r="0.917"/>
+                        </svg>
+                      </span>
+                      <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
+                    </a>
+                  </li>
+                {%- endif -%}
+                {%- if settings.social_youtube_link != blank -%}
+                  <li>
+                    <a
+                      href="{{ settings.social_youtube_link }}"
+                      class="footer-trs__social-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span class="svg-wrapper">{{- 'icon-youtube.svg' | inline_asset_content -}}</span>
+                      <span class="visually-hidden">{{ 'general.social.links.youtube' | t }}</span>
+                    </a>
+                  </li>
+                {%- endif -%}
+                {%- if settings.social_tiktok_link != blank -%}
+                  <li>
+                    <a
+                      href="{{ settings.social_tiktok_link }}"
+                      class="footer-trs__social-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span class="svg-wrapper">{{- 'icon-tiktok.svg' | inline_asset_content -}}</span>
+                      <span class="visually-hidden">{{ 'general.social.links.tiktok' | t }}</span>
+                    </a>
+                  </li>
+                {%- endif -%}
+                {%- if settings.social_twitter_link != blank -%}
+                  <li>
+                    <a
+                      href="{{ settings.social_twitter_link }}"
+                      class="footer-trs__social-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span class="svg-wrapper">{{- 'icon-twitter.svg' | inline_asset_content -}}</span>
+                      <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
+                    </a>
+                  </li>
+                {%- endif -%}
+                {%- if settings.social_pinterest_link != blank -%}
+                  <li>
+                    <a
+                      href="{{ settings.social_pinterest_link }}"
+                      class="footer-trs__social-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span class="svg-wrapper">{{- 'icon-pinterest.svg' | inline_asset_content -}}</span>
+                      <span class="visually-hidden">{{ 'general.social.links.pinterest' | t }}</span>
+                    </a>
+                  </li>
+                {%- endif -%}
+                {%- if settings.social_snapchat_link != blank -%}
+                  <li>
+                    <a
+                      href="{{ settings.social_snapchat_link }}"
+                      class="footer-trs__social-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span class="svg-wrapper">{{- 'icon-snapchat.svg' | inline_asset_content -}}</span>
+                      <span class="visually-hidden">{{ 'general.social.links.snapchat' | t }}</span>
+                    </a>
+                  </li>
+                {%- endif -%}
+                {%- if settings.social_tumblr_link != blank -%}
+                  <li>
+                    <a
+                      href="{{ settings.social_tumblr_link }}"
+                      class="footer-trs__social-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span class="svg-wrapper">{{- 'icon-tumblr.svg' | inline_asset_content -}}</span>
+                      <span class="visually-hidden">{{ 'general.social.links.tumblr' | t }}</span>
+                    </a>
+                  </li>
+                {%- endif -%}
+                {%- if settings.social_vimeo_link != blank -%}
+                  <li>
+                    <a
+                      href="{{ settings.social_vimeo_link }}"
+                      class="footer-trs__social-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span class="svg-wrapper">{{- 'icon-vimeo.svg' | inline_asset_content -}}</span>
+                      <span class="visually-hidden">{{ 'general.social.links.vimeo' | t }}</span>
+                    </a>
+                  </li>
+                {%- endif -%}
+              </ul>
+            </div>
+          {%- else -%}
+            {%- if request.design_mode -%}
+              <div class="footer-trs__block" {{ block.shopify_attributes }}>
+                <p class="footer-trs__copyright">Add social links in Theme settings → Social media</p>
+              </div>
+            {%- else -%}
+              <div {{ block.shopify_attributes }}></div>
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+
+        {%- for block in contact_blocks -%}
+          <div class="footer-trs__block footer-trs__block--contact" {{ block.shopify_attributes }}>
+            <div class="footer-trs__contact">
+              {%- if block.settings.address != blank -%}
+                <div class="footer-trs__contact-row">
+                  <span class="footer-trs__contact-icon" aria-hidden="true">
+                    {{- 'icon-map-pin.svg' | inline_asset_content -}}
+                  </span>
+                  <div class="footer-trs__contact-body">
+                    <p class="footer-trs__address">{{ block.settings.address | newline_to_br }}</p>
+                    {%- if block.settings.google_maps_url != blank or block.settings.apple_maps_url != blank -%}
+                      <div class="footer-trs__maps">
+                        {%- if block.settings.google_maps_url != blank -%}
+                          <a
+                            class="footer-trs__maps-link"
+                            href="{{ block.settings.google_maps_url }}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {%- if block.settings.google_maps_icon != blank -%}
+                              {{
+                                block.settings.google_maps_icon
+                                | image_url: width: 48
+                                | image_tag: class: 'footer-trs__maps-icon', loading: 'lazy', widths: '24, 48', alt: ''
+                              }}
+                            {%- else -%}
+                              <svg class="footer-trs__maps-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="#34A853" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                                <circle fill="#FBBC05" cx="12" cy="9" r="2.5"/>
+                                <path fill="#EA4335" d="M12 2v7l5.2-3.4C15.8 3.4 14 2 12 2z"/>
+                                <path fill="#4285F4" d="M12 2C10 2 8.2 3.4 6.8 5.6L12 9V2z"/>
+                              </svg>
+                            {%- endif -%}
+                            <span>{{ block.settings.google_maps_label | escape }}</span>
+                          </a>
+                        {%- endif -%}
+                        {%- if block.settings.google_maps_url != blank and block.settings.apple_maps_url != blank -%}
+                          <span class="footer-trs__maps-sep" aria-hidden="true">|</span>
+                        {%- endif -%}
+                        {%- if block.settings.apple_maps_url != blank -%}
+                          <a
+                            class="footer-trs__maps-link"
+                            href="{{ block.settings.apple_maps_url }}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {%- if block.settings.apple_maps_icon != blank -%}
+                              {{
+                                block.settings.apple_maps_icon
+                                | image_url: width: 48
+                                | image_tag: class: 'footer-trs__maps-icon', loading: 'lazy', widths: '24, 48', alt: ''
+                              }}
+                            {%- else -%}
+                              <svg class="footer-trs__maps-icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                                <path d="M17.05 12.54c-.03-2.4 1.96-3.55 2.05-3.61-1.12-1.63-2.86-1.85-3.48-1.88-1.48-.15-2.89.87-3.64.87-.76 0-1.92-.85-3.16-.83-1.63.02-3.13.95-3.97 2.4-1.7 2.94-.43 7.28 1.21 9.66.81 1.16 1.77 2.47 3.03 2.42 1.22-.05 1.68-.78 3.15-.78 1.46 0 1.88.78 3.16.76 1.31-.02 2.14-1.18 2.94-2.35.93-1.35 1.31-2.66 1.33-2.73-.03-.01-2.54-.97-2.57-3.93ZM14.7 5.1c.67-.81 1.12-1.94.99-3.07-0.96.04-2.13.64-2.82 1.45-.62.72-1.16 1.87-1.02 2.97 1.08.08 2.18-.55 2.85-1.35Z"/>
+                              </svg>
+                            {%- endif -%}
+                            <span>{{ block.settings.apple_maps_label | escape }}</span>
+                          </a>
+                        {%- endif -%}
+                      </div>
+                    {%- endif -%}
+                  </div>
+                </div>
+              {%- endif -%}
+
+              {%- if block.settings.phone != blank -%}
+                {%- assign phone_href = block.settings.phone | replace: ' ', '' | replace: '(', '' | replace: ')', '' | replace: '-', '' -%}
+                <div class="footer-trs__contact-row">
+                  <span class="footer-trs__contact-icon" aria-hidden="true">
+                    {{- 'icon-phone.svg' | inline_asset_content -}}
+                  </span>
+                  <a class="footer-trs__phone-link" href="tel:{{ phone_href }}">{{ block.settings.phone | escape }}</a>
+                </div>
+              {%- endif -%}
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+
+      <div class="footer-trs__col footer-trs__col--links">
+        {%- for block in quick_blocks -%}
+          <div class="footer-trs__block footer-trs__block--links" {{ block.shopify_attributes }}>
+            {%- if block.settings.heading != blank -%}
+              <h2 class="footer-trs__heading">{{ block.settings.heading | escape }}</h2>
+            {%- endif -%}
+            {%- if block.settings.menu != blank -%}
+              <ul class="footer-trs__links" role="list">
+                {%- for link in block.settings.menu.links -%}
+                  <li>
+                    <a href="{{ link.url }}" class="footer-trs__link{% if link.active %} footer-trs__link--active{% endif %}">
+                      <span>{{ link.title | escape }}</span>
+                      {%- if block.settings.show_chevron -%}
+                        <span class="footer-trs__link-chevron" aria-hidden="true"></span>
+                      {%- endif -%}
+                    </a>
+                  </li>
+                {%- endfor -%}
+              </ul>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+
+        {%- if link_blocks.size > 0 -%}
+          <div class="footer-trs__block footer-trs__block--manual-links">
+            {%- unless quick_blocks.size > 0 -%}
+              {%- if section.settings.quick_links_heading != blank -%}
+                <h2 class="footer-trs__heading">{{ section.settings.quick_links_heading | escape }}</h2>
+              {%- endif -%}
+            {%- endunless -%}
+            <ul class="footer-trs__links" role="list">
+              {%- for block in link_blocks -%}
+                {%- if block.settings.label != blank and block.settings.link != blank -%}
+                  <li {{ block.shopify_attributes }}>
+                    <a href="{{ block.settings.link }}" class="footer-trs__link">
+                      <span>{{ block.settings.label | escape }}</span>
+                      <span class="footer-trs__link-chevron" aria-hidden="true"></span>
+                    </a>
+                  </li>
+                {%- endif -%}
+              {%- endfor -%}
+            </ul>
+          </div>
+        {%- endif -%}
+      </div>
+
+      <div class="footer-trs__col footer-trs__col--payment">
+        {%- for block in payment_blocks -%}
+          <div class="footer-trs__block footer-trs__block--payment" {{ block.shopify_attributes }}>
+            {%- if block.settings.heading != blank -%}
+              <h2 class="footer-trs__heading">{{ block.settings.heading | escape }}</h2>
+            {%- endif -%}
+            {%- if block.settings.use_enabled_payment_types -%}
+              <ul class="footer-trs__payment-grid" role="list">
+                {%- for type in shop.enabled_payment_types -%}
+                  <li class="footer-trs__payment-item">
+                    {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+                  </li>
+                {%- endfor -%}
+              </ul>
+            {%- elsif block.settings.custom_image != blank -%}
+              {%- assign payment_alt = block.settings.heading | default: 'Payment methods' -%}
+              <div class="footer-trs__logo">
+                {{
+                  block.settings.custom_image
+                  | image_url: width: 800
+                  | image_tag:
+                    loading: 'lazy',
+                    widths: '200, 320, 480, 640, 800',
+                    sizes: '(min-width: 990px) 280px, 70vw',
+                    alt: payment_alt
+                }}
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+
+    {%- if section.settings.show_copyright -%}
+      <div class="footer-trs__bottom">
+        <p class="footer-trs__copyright">
+          {%- if section.settings.copyright_text != blank -%}
+            {{ section.settings.copyright_text }}
+          {%- else -%}
+            &copy; {{ 'now' | date: '%Y' }} {{ shop.name }}. All rights reserved.
+          {%- endif -%}
+        </p>
+      </div>
+    {%- endif -%}
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "TRS Footer",
+  "tag": "section",
+  "class": "section-footer-trs",
+  "blocks": [
+    {
+      "type": "logo",
+      "name": "Logo image",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Logo"
+        },
+        {
+          "type": "range",
+          "id": "image_width",
+          "min": 80,
+          "max": 360,
+          "step": 10,
+          "unit": "px",
+          "label": "Logo width",
+          "default": 220
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Logo link"
+        }
+      ]
+    },
+    {
+      "type": "social",
+      "name": "Social icons",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Uses links from Theme settings → Social media. Style the circular icons below."
+        },
+        {
+          "type": "range",
+          "id": "icon_size",
+          "min": 28,
+          "max": 56,
+          "step": 2,
+          "unit": "px",
+          "label": "Icon size",
+          "default": 40
+        },
+        {
+          "type": "range",
+          "id": "gap",
+          "min": 4,
+          "max": 24,
+          "step": 2,
+          "unit": "px",
+          "label": "Gap between icons",
+          "default": 12
+        },
+        {
+          "type": "range",
+          "id": "border_width",
+          "min": 0,
+          "max": 4,
+          "step": 1,
+          "unit": "px",
+          "label": "Border width",
+          "default": 1
+        },
+        {
+          "type": "color",
+          "id": "icon_color",
+          "label": "Icon color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "border_color",
+          "label": "Border color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background",
+          "default": "#00000000"
+        }
+      ]
+    },
+    {
+      "type": "contact",
+      "name": "Address & phone",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "address",
+          "label": "Store address",
+          "default": "1111 N. Industrial Rd.\nOlathe, KS 66062, USA"
+        },
+        {
+          "type": "text",
+          "id": "google_maps_label",
+          "label": "Google Maps label",
+          "default": "Google Maps"
+        },
+        {
+          "type": "url",
+          "id": "google_maps_url",
+          "label": "Google Maps link"
+        },
+        {
+          "type": "image_picker",
+          "id": "google_maps_icon",
+          "label": "Google Maps icon (optional)"
+        },
+        {
+          "type": "text",
+          "id": "apple_maps_label",
+          "label": "Apple Maps label",
+          "default": "Apple Maps"
+        },
+        {
+          "type": "url",
+          "id": "apple_maps_url",
+          "label": "Apple Maps link"
+        },
+        {
+          "type": "image_picker",
+          "id": "apple_maps_icon",
+          "label": "Apple Maps icon (optional)"
+        },
+        {
+          "type": "text",
+          "id": "phone",
+          "label": "Phone number",
+          "default": "(913) 555-1234"
+        }
+      ]
+    },
+    {
+      "type": "quick_links",
+      "name": "Quick links",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Quick links"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Menu",
+          "default": "footer"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_chevron",
+          "label": "Show chevron after links",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "link",
+      "name": "Link",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Contact Us"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    },
+    {
+      "type": "payment",
+      "name": "Payment options",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "We accept"
+        },
+        {
+          "type": "checkbox",
+          "id": "use_enabled_payment_types",
+          "label": "Show enabled store payment icons",
+          "default": true,
+          "info": "Uses payment methods enabled in Shopify admin. Displayed in white rounded cards."
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_image",
+          "label": "Custom payment image",
+          "info": "Optional fallback or override graphic when store payment icons are disabled."
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-4"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color",
+      "default": "#4A90D9"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#4A90D9"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "muted_color",
+      "label": "Copyright color",
+      "default": "#9CA3AF"
+    },
+    {
+      "type": "header",
+      "content": "Quick links"
+    },
+    {
+      "type": "text",
+      "id": "quick_links_heading",
+      "label": "Heading for manual link blocks",
+      "default": "Quick links",
+      "info": "Used when you add individual Link blocks instead of a Quick links menu."
+    },
+    {
+      "type": "header",
+      "content": "Copyright"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_copyright",
+      "label": "Show copyright",
+      "default": true
+    },
+    {
+      "type": "inline_richtext",
+      "id": "copyright_text",
+      "label": "Copyright text",
+      "info": "Leave blank to use © year + shop name."
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "TRS Footer",
+      "blocks": [
+        {
+          "type": "logo"
+        },
+        {
+          "type": "social"
+        },
+        {
+          "type": "contact"
+        },
+        {
+          "type": "quick_links"
+        },
+        {
+          "type": "payment"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
