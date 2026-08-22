@@ -1,26 +1,27 @@
 {{ 'section-footer-trs.css' | asset_url | stylesheet_tag }}
 
+  {%- liquid
+    assign footer_pad_top = section.settings.padding_top | plus: section.settings.margin_top
+    assign footer_pad_top_mobile = footer_pad_top | times: 0.75 | round: 0
+    assign footer_pad_bottom_mobile = section.settings.padding_bottom | times: 0.75 | round: 0
+  -%}
+
 {%- style -%}
   .footer-trs-{{ section.id }} {
     --footer-trs-accent: {{ section.settings.accent_color }};
     --footer-trs-text: {{ section.settings.text_color }};
     --footer-trs-muted: {{ section.settings.muted_color }};
     --footer-trs-heading: {{ section.settings.heading_color }};
-    margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
   }
 
-  .footer-trs-{{ section.id }} .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  .footer-trs-{{ section.id }}.section-{{ section.id }}-padding {
+    padding-top: {{ footer_pad_top_mobile }}px;
+    padding-bottom: {{ footer_pad_bottom_mobile }}px;
   }
 
   @media screen and (min-width: 750px) {
-    .footer-trs-{{ section.id }} {
-      margin-top: {{ section.settings.margin_top }}px;
-    }
-
-    .footer-trs-{{ section.id }} .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
+    .footer-trs-{{ section.id }}.section-{{ section.id }}-padding {
+      padding-top: {{ footer_pad_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
@@ -688,7 +689,8 @@
       "max": 100,
       "step": 4,
       "unit": "px",
-      "label": "Margin top",
+      "label": "Top spacing",
+      "info": "Extra space above the footer content. Keeps the footer background color.",
       "default": 0
     },
     {

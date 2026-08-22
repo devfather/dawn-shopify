@@ -106,14 +106,19 @@
   transform: translateY(-1px);
 }
 
-.footer-trs__social-link .svg-wrapper,
-.footer-trs__social-link svg {
-  width: 48%;
-  height: 48%;
-  display: block;
+.footer-trs__social-link .svg-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 68%;
+  height: 68%;
 }
 
-.footer-trs__social-link svg {
+.footer-trs__social-link .svg-wrapper > svg,
+.footer-trs__social-link > svg {
+  width: 100%;
+  height: 100%;
+  display: block;
   fill: currentColor;
 }
 
