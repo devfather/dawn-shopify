@@ -16,6 +16,7 @@
   - width_percent: {Number}
   - horizontal_position: {String} left|center|right
   - offset_vertical: {Number} px margin-top
+  - skip_assets: {Boolean} skip CSS/JS tags when parent already loaded them
 {% endcomment %}
 
 {%- liquid
@@ -33,10 +34,13 @@
   assign width_percent = width_percent | default: 100
   assign horizontal_position = horizontal_position | default: 'center'
   assign offset_vertical = offset_vertical | default: 0
+  assign skip_assets = skip_assets | default: false
 -%}
 
-{{ 'trs-parts-search.css' | asset_url | stylesheet_tag }}
-<script src="{{ 'trs-parts-search.js' | asset_url }}" defer></script>
+{%- unless skip_assets -%}
+  {{ 'trs-parts-search.css' | asset_url | stylesheet_tag }}
+  <script src="{{ 'trs-parts-search.js' | asset_url }}" defer></script>
+{%- endunless -%}
 
 <trs-parts-search
   class="trs-parts-search trs-parts-search__align-{{ horizontal_position }}"

@@ -1,12 +1,16 @@
 {% comment %}
-  Renders a header search modal. Should be used with 'header.liquid'
+  Header search modal — opens TRS parts/model/cross-ref search
+  (not native Dawn predictive search).
 
   Accepts:
-  - input_id: {String} Id for the search input element (required)
+  - input_id: {String} Id suffix for the search input (required)
 
   Usage:
-  {% render 'header-search', input_id: 'My-Id'%}
+  {% render 'header-search', input_id: 'Search-In-Modal' %}
 {% endcomment %}
+
+{{ 'trs-parts-search.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'trs-parts-search.js' | asset_url }}" defer></script>
 
 <details-modal class="header__search">
   <details>
@@ -32,67 +36,29 @@
     >
       <div class="modal-overlay"></div>
       <div
-        class="search-modal__content{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} search-modal__content-top{% else %} search-modal__content-bottom{% endif %}"
+        class="search-modal__content search-modal__content--trs{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} search-modal__content-top{% else %} search-modal__content-bottom{% endif %}"
         tabindex="-1"
       >
-        {%- if settings.predictive_search_enabled -%}
-          <predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">
-        {%- else -%}
-          <search-form class="search-modal__form">
-        {%- endif -%}
-        <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
-          <div class="field">
-            <input
-              class="search__input field__input"
-              id="{{ input_id }}"
-              type="search"
-              name="q"
-              value="{{ search.terms | escape }}"
-              placeholder="{{ 'general.search.search' | t }}"
-              {%- if settings.predictive_search_enabled -%}
-                role="combobox"
-                aria-expanded="false"
-                aria-owns="predictive-search-results"
-                aria-controls="predictive-search-results"
-                aria-haspopup="listbox"
-                aria-autocomplete="list"
-                autocorrect="off"
-                autocomplete="off"
-                autocapitalize="off"
-                spellcheck="false"
-              {%- endif -%}
-            >
-            <label class="field__label" for="{{ input_id }}">{{ 'general.search.search' | t }}</label>
-            <input type="hidden" name="options[prefix]" value="last">
-            <button
-              type="reset"
-              class="reset__button field__button{% if search.terms == blank %} hidden{% endif %}"
-              aria-label="{{ 'general.search.reset' | t }}"
-            >
-              <span class="svg-wrapper">
-                {{- 'icon-reset.svg' | inline_asset_content -}}
-              </span>
-            </button>
-            <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
-              <span class="svg-wrapper">
-                {{- 'icon-search.svg' | inline_asset_content -}}
-              </span>
-            </button>
-          </div>
+        <div class="search-modal__trs-wrap">
+          {% render 'trs-parts-search',
+            unique_id: input_id,
+            placeholder: 'Search model, part, or cross-reference #',
+            show_button_label: false,
+            button_label: 'Search',
+            background_color: '#ffffff',
+            text_color: '#121212',
+            border_color: '#121212',
+            border_width: 1,
+            border_radius: 4,
+            padding_vertical: 14,
+            padding_horizontal: 16,
+            width_percent: 100,
+            horizontal_position: 'center',
+            offset_vertical: 0,
+            skip_assets: true
+          %}
+        </div>
 
-          {%- if settings.predictive_search_enabled -%}
-            <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
-              {%- render 'loading-spinner', class: 'predictive-search__loading-state' -%}
-            </div>
-
-            <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
-          {%- endif -%}
-        </form>
-        {%- if settings.predictive_search_enabled -%}
-          </predictive-search>
-        {%- else -%}
-          </search-form>
-        {%- endif -%}
         <button
           type="button"
           class="search-modal__close-button modal__close-button link link--text focus-inset"
@@ -106,3 +72,41 @@
     </div>
   </details>
 </details-modal>
+
+{% style %}
+  .search-modal:has(.search-modal__content--trs) {
+    overflow: visible;
+    height: auto;
+    min-height: calc(100% + var(--inputs-margin-offset) + (2 * var(--inputs-border-width)));
+  }
+
+  .search-modal__content--trs {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    width: min(72rem, calc(100% - 3rem));
+    max-width: 100%;
+    height: auto;
+    overflow: visible;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+  }
+
+  .search-modal__trs-wrap {
+    flex: 1 1 auto;
+    min-width: 0;
+    position: relative;
+    z-index: 2;
+    overflow: visible;
+  }
+
+  .search-modal__content--trs .trs-parts-search {
+    width: 100%;
+    max-width: none;
+    --trs-search-width: 100%;
+  }
+
+  .search-modal__content--trs .trs-parts-search__results {
+    z-index: 40;
+  }
+{% endstyle %}
