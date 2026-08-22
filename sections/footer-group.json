@@ -17,6 +17,7 @@
         "logo": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/Artboard_2_1.png",
             "image_width": 220,
             "link": "/"
           }
@@ -24,21 +25,23 @@
         "social": {
           "type": "social",
           "settings": {
-            "icon_size": 40,
+            "icon_size": 36,
             "gap": 12,
             "border_width": 1,
             "icon_color": "#ffffff",
             "border_color": "#ffffff",
-            "background_color": "#00000000"
+            "background_color": "rgba(0,0,0,0)"
           }
         },
         "contact": {
           "type": "contact",
           "settings": {
-            "address": "1111 N. Industrial Rd.\nOlathe, KS 66062, USA",
+            "address": "887 N Jan-Mar Ct\nOlathe, KS 66061",
             "google_maps_label": "Google Maps",
+            "google_maps_url": "",
             "apple_maps_label": "Apple Maps",
-            "phone": "(913) 555-1234"
+            "apple_maps_url": "",
+            "phone": "(913) 732-0514"
           }
         },
         "quick_links": {
@@ -66,14 +69,14 @@
       ],
       "settings": {
         "color_scheme": "scheme-4",
-        "accent_color": "#4A90D9",
-        "heading_color": "#4A90D9",
-        "text_color": "#FFFFFF",
-        "muted_color": "#9CA3AF",
+        "accent_color": "#4a90d9",
+        "heading_color": "#4a90d9",
+        "text_color": "#ffffff",
+        "muted_color": "#9ca3af",
         "quick_links_heading": "Quick links",
         "show_copyright": true,
         "copyright_text": "",
-        "margin_top": 0,
+        "margin_top": 20,
         "padding_top": 48,
         "padding_bottom": 36
       }
